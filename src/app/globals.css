@@ -3,23 +3,16 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.responsive {
+  @apply md:max-w-480 ml-auto mr-auto tablet:max-w-3xl desktop:max-w-screen-desktop;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .headerNavLink {
+    @apply py-px no-underline border border-transparent text-sm font-normal tracking-1.4 hover:border-b-white transition-colors duration-300;
   }
-} */
-
-body {
-  /* background-color: gray; */
 }
+
 .hero {
   background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
     url('/heroBgMob.jpg');
@@ -28,7 +21,19 @@ body {
   background-size: cover;
 }
 
-.customButtonBorder::before {
+@layer components {
+  .heroTitleMob {
+    @apply uppercase text-40 font-thin leading-snug -tracking-1.6;
+  }
+  .heroTitleTab {
+    @apply tablet:text-67 tablet:leading-normal tablet:-tracking-2.68;
+  }
+  .heroTitleDesk {
+    @apply desktop:text-98 desktop:leading-tight desktop:-tracking-3.92;
+  }
+}
+
+.customHeroButtonBorder::before {
   content: '';
   background-image: url('/btnFrameMobL.svg');
   position: absolute;
@@ -38,7 +43,7 @@ body {
   height: 100%;
 }
 
-.customButtonBorder::after {
+.customHeroButtonBorder::after {
   content: '';
   background-image: url('/btnFrameMobR.svg');
   position: absolute;
@@ -56,12 +61,13 @@ body {
   background-size: cover;
 }
 
-.aboutText {
-  @apply text-sm font-extralight leading-5;
-}
-
-.responsive {
-  @apply md:max-w-480 ml-auto mr-auto;
+@layer components {
+  .aboutTextMob {
+    @apply text-sm font-extralight leading-5;
+  }
+  .aboutTextTab {
+    @apply tablet:text-base tablet:leading-tight;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -81,5 +87,34 @@ body {
         rgba(0, 37, 49, 0) 100%
       ),
       url('/aboutBgMob480.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        180deg,
+        #001826 0%,
+        rgba(0, 37, 49, 0) 100%
+      ),
+      url('/heroBgTab.jpg');
+  }
+  .about {
+    background-image: url('/aboutBgTab.jpg');
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      url('/heroBgDesk.jpg');
+  }
+  .about {
+    background-image: linear-gradient(
+        180deg,
+        #001826 0%,
+        rgba(0, 37, 49, 0) 100%
+      ),
+      url('/aboutBgDesk.jpg');
   }
 }
