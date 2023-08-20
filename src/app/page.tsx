@@ -175,129 +175,235 @@ const Home = () => (
       </Container>
     </section>
 
-    <section className="  responsive career py-14 tablet:py-16" id="career">
+    {/* ***********CAREER SECTION */ }
+    <section
+      className="  responsive career py-14 tablet:py-16 desktop:pt-104px desktop:pb-4"
+      id="career"
+    >
       <Container>
-        <div className=" tablet:flex tablet:mb-1">
-          <h2 className=" mb-6 uppercase text-40 font-thin leading-snug -tracking-1.6 tablet:mb-0 tablet:text-67 tablet:leading-none tablet:-tracking-2.68 ">
+        <div className=" tablet:flex tablet:mb-1 desktop:mb-6">
+          <h2 className=" mb-6 uppercase text-40 font-thin leading-snug -tracking-1.6 tablet:mb-0 tablet:text-67 tablet:leading-none tablet:-tracking-2.68 desktop:text-98 desktop:leading-normal desktop:tracking-3.92">
             CHOOSE <strong className=" font-medium">US</strong>
           </h2>
-          <p className=" mb-9 ml-auto w-45 text-sm font-extralight tablet:mb-0 tablet:w-56 tablet:text-13 tablet:leading-5">
+          <p className=" mb-9 ml-auto w-45 text-sm font-extralight tablet:mb-0 tablet:w-56 tablet:text-13 tablet:leading-5 desktop:w-296px desktop:text-lg desktop:leading-6">
             Your chance to join our passionate team in Carpathian tourism.
             Seeking talented professionals to share our common mission.
           </p>
         </div>
-        <h3 className=" mb-9 ml-auto w-45 uppercase text-3xl font-extralight leading-normal tablet:mb-14 tablet:ml-0 tablet:mr-auto tablet:px-20 tablet:w-auto tablet:text-3xl">
+        <h3 className=" mb-9 ml-auto w-45 uppercase text-3xl font-extralight leading-normal tablet:mb-14 tablet:ml-0 tablet:mr-auto tablet:px-20 tablet:w-auto tablet:text-3xl desktop:mb-11 desktop:px-32 desktop:text-4xl desktop:leading-1.08">
           WHY US
         </h3>
 
-        <div className=' tablet:flex '>
-          <ul className=" mb-28 w-45 text-right tablet:w-220px tablet:mr-5 tablet:mb-0">
-            <li className=" mb-4 tablet:mb-6">
-              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5">Professional development</h4>
-              <p className=" text-xs font-extralight leading-5  ">
+        <div className=" tablet:flex ">
+          <ul className=" mb-28 w-45 text-right tablet:w-220px tablet:mr-5 tablet:mb-0 desktop:w-606px desktop:mr-6 ">
+            <li className=" mb-4 tablet:mb-6 desktop:flex desktop:justify-between">
+              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5 desktop:w-294px desktop:mb-0 desktop:text-lg desktop:leading-6">
+                Professional development
+              </h4>
+              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6">
                 We offer growth opportunities and a creative environment to
                 nurture your talents.
               </p>
             </li>
-            <li className=" mb-4 tablet:mb-6">
-              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5">Teamwork</h4>
-              <p className=" text-xs font-extralight leading-5 ">
-                Join our close-knit family, where support and inspiration abound.
+            <li className=" mb-4 tablet:mb-6 desktop:flex desktop:justify-between">
+              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5 desktop:w-294px desktop:mb-0 desktop:text-lg desktop:leading-6">
+                Teamwork
+              </h4>
+              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
+                Join our close-knit family, where support and inspiration
+                abound.
               </p>
             </li>
-            <li className=" mb-4 tablet:mb-6">
-              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5">Stimulating work environment</h4>
-              <p className=" text-xs font-extralight leading-5 ">
+            <li className=" mb-4 tablet:mb-6 desktop:flex desktop:justify-between">
+              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5 desktop:w-294px desktop:mb-0 desktop:text-lg desktop:leading-6">
+                Stimulating work environment
+              </h4>
+              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
                 Flexibility and remote options for a comfortable experience.
               </p>
             </li>
-            <li>
-              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5">Exciting challenges</h4>
-              <p className=" text-xs font-extralight leading-5 ">
+            <li className=" desktop:flex desktop:justify-between">
+              <h4 className=" mb-2 text-sm tablet:text-base tablet:leading-5 desktop:w-294px desktop:mb-0 desktop:text-lg desktop:leading-6">
+                Exciting challenges
+              </h4>
+              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
                 Unleash your potential through unforgettable projects showcasing
                 Carpathian beauty.
               </p>
             </li>
           </ul>
 
-          <div className=' tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-96'>
-            <p className=" ml-auto mb-6 w-45 text-sm font-extralight tablet:ml-0 tablet:mb-8 tablet:w-220px tablet:text-13 tablet:leading-5">
+          <form className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-408px tablet:w-220px tablet:content-between desktop:h-466px desktop:w-72 desktop:-translate-y-86px">
+            <p className=" ml-auto mb-6 w-45 text-sm font-extralight tablet:ml-0 tablet:mb-7 tablet:w-220px tablet:text-13 tablet:leading-5 desktop:mb-14px desktop:w-60 desktop:text-lg desktop:leading-6">
               Don&rsquo;t miss your opportunity! Fill out the form right now and
               join our team!
             </p>
-            <form className=' tablet:w-220px'>
-              <label className=" mb-4 block">
-                <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
-                  Full name
-                </span>
-                <input
-                  className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none "
-                  type="text"
-                  placeholder="John Smith"
-                />
-              </label>
+            <label className=" relative mb-4 block desktop:mb-6">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                Full name
+              </span>
+              <input
+                className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                type="text"
+                placeholder="John Smith"
+              />
+              <span className=" error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center">
+                Invalid name
+              </span>
+            </label>
 
-              <label className=" mb-4 block">
-                <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
-                  E-mail
-                </span>
-                <input
-                  className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none "
-                  type="email"
-                  placeholder="johnsmith@email.com"
-                />
-              </label>
+            <label className=" relative mb-4 block desktop:mb-6">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                E-mail
+              </span>
+              <input
+                className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                type="email"
+                placeholder="johnsmith@email.com"
+              />
+              <span className=" error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center">
+                Incorrect email
+              </span>
+            </label>
 
-              <label className=" mb-4 block">
-                <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
-                  Position
-                </span>
-                <input
-                  className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none "
-                  type="text"
-                  placeholder="Movie maker"
-                />
-              </label>
+            <label className=" mb-4 block desktop:mb-6">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                Position
+              </span>
+              <input
+                className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                type="text"
+                placeholder="Movie maker"
+              />
+            </label>
 
-              <label className=" mb-4 block">
-                <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
-                  Phone
-                </span>
-                <input
-                  className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none "
-                  type="tel"
-                  placeholder="+ 38 (097) 12 34 567"
-                />
-              </label>
+            <label className=" relative mb-4 block desktop:mb-9">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                Phone
+              </span>
+              <input
+                className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                type="tel"
+                placeholder="+ 38 (097) 12 34 567"
+              />
+              <span className=" error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center">
+                Incorrect phone
+              </span>
+            </label>
 
-              <label className=" mb-4 block">
-                <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
-                  Message
-                </span>
-                <textarea className=" px-2 h-196px resize-none bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none " />
-              </label>
+            <label className=" mb-4 block tablet:ml-5 tablet:w-220px tablet:order-2 tablet:mt-auto tablet:mb-2 desktop:w-294px desktop:mb-8 desktop:ml-6 ">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                Message
+              </span>
+              <textarea className=" px-2 h-196px resize-none bg-inputBg w-full text-13 font-extralight leading-6 outline-none tablet:h-230px desktop:text-xl desktop:leading-6 desktop:py-2px desktop:h-268px" />
+            </label>
 
-              <label className=" mb-4 flex">
-                <input className=" hidden peer" type="checkbox" />
-                <span className=" checkboxFrame relative shrink-0 w-22px h-22px border-1 border-white bg-inputBg peer-checked:bg-white transition-colors duration-300"></span>
-                <p className=" ml-2 text-xs font-extralight leading-1.83">
-                  I confirm my consent to the processing of personal data.
-                </p>
-              </label>
+            <label className=" mb-4 flex tablet:mb-0">
+              <input className=" hidden peer" type="checkbox" />
+              <span className=" checkboxFrame relative shrink-0 w-22px h-22px border-1 border-white bg-inputBg peer-checked:bg-white transition-colors duration-300"></span>
+              <p className=" ml-2 text-xs font-extralight leading-1.83 desktop:leading-6">
+                I confirm my consent to the processing of personal data.
+              </p>
+            </label>
 
-              <button
-                className=" ml-auto block w-20 uppercase text-3xl font-normal leading-normal"
-                type="submit"
-                aria-label="Submit form button"
-              >
-                send
-              </button>
-            </form>
-          </div>
+            <button
+              className=" ml-auto block w-20 uppercase text-3xl font-normal leading-normal hover:text-mainBtnBgHover transition-colors duration-300 tablet:order-2 desktop:text-32"
+              type="submit"
+              aria-label="Submit form button"
+            >
+              send
+            </button>
+          </form>
         </div>
-
       </Container>
     </section>
+
+    <footer className="  responsive footer py-14 tablet:py-16 desktop:py-104px ">
+      <Container>
+        <h2 className=' mb-9 uppercase text-40 font-thin leading-snug -tracking-1.6 tablet:mb-9 tablet:text-67 tablet:leading-none tablet:-tracking-2.68 desktop:mb-71px desktop:text-98 desktop:leading-normal desktop:tracking-3.92'>Contact <strong className=" font-medium">US</strong></h2>
+
+        <div className=' desktop:flex desktop:items-start desktop:justify-between'>
+          <div className=' tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-104px tablet:items-end tablet:content-around tablet:mb-16 desktop:flex-nowrap'>
+            <div className=' mb-6 flex justify-end items-baseline desktop:mb-16 '>
+              <div className=' mr-5'>
+                <a className=' block text-sm leading-6 tablet:text-base desktop:text-lg desktop:leading-6' href='tel:+380981234567' rel='noopener noreferrer nofollow' target='_blank' aria-label='phone call'>+38 (098) 12 34 567</a>
+                <a className=' block text-sm leading-6 tablet:text-base desktop:text-lg desktop:leading-6' href='tel:+380731234567' rel='noopener noreferrer nofollow' target='_blank' aria-label='phone call'>+38 (073) 12 34 567</a>
+              </div>
+              <p className=' w-86px text-xs font-extralight leading-5 desktop:leading-6'>Phone number</p>
+            </div>
+
+            <div className=' mb-6 flex justify-end items-baseline tablet:mb-0 desktop:mb-32'>
+              <a className='block text-sm leading-6 tablet:text-base desktop:text-lg desktop:leading-6' href="mailto:support@carptravel.com" rel='noopener noreferrer nofollow' target='_blank' aria-label='write email'>support@carptravel.com</a>
+              <p className=' w-86px ml-5 text-xs font-extralight leading-5 desktop:leading-6'>E-mail</p>
+            </div>
+
+            <div className=' mb-3 flex justify-end items-baseline tablet:mb-0 tablet:ml-90px'>
+              <p className=' mr-5  text-xs font-extralight leading-5 desktop:leading-6 desktop:order-last desktop:w-86px desktop:ml-5 desktop:mr-0'>Follow us</p>
+              <ul>
+                <li className='w-86px desktop:text-right'>
+                  <a className='footerSocialLink tablet:text-base desktop:text-lg desktop:leading-6  ' href="/" rel='noopener noreferrer nofollow' target='_blank' aria-label='likt to socials'>facebook</a>
+                </li>
+                <li className='w-86px desktop:text-right'>
+                  <a className='footerSocialLink tablet:text-base desktop:text-lg desktop:leading-6' href="/" rel='noopener noreferrer nofollow' target='_blank' aria-label='likt to socials'>instagram</a>
+                </li>
+                <li className='w-86px desktop:text-right'>
+                  <a className='footerSocialLink tablet:text-base desktop:text-lg desktop:leading-6' href="/" rel='noopener noreferrer nofollow' target='_blank' aria-label='likt to socials'>youtube</a>
+                </li>
+                <li className='w-86px desktop:text-right'>
+                  <a className='footerSocialLink tablet:text-base desktop:text-lg desktop:leading-6' href="/" rel='noopener noreferrer nofollow' target='_blank' aria-label='likt to socials'>tiktok</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <form className='tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-305px desktop:flex-row desktop:w-606px '>
+
+            <label className=" relative mb-6 block tablet:mb-7 tablet:w-56 ">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                Full name
+              </span>
+              <input
+                className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                type="text"
+                placeholder="John Smith"
+              />
+              <span className=" error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center">
+                Invalid name
+              </span>
+            </label>
+
+            <label className=" relative mb-6 block tablet:w-56 ">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                E-mail
+              </span>
+              <input
+                className=" px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                type="email"
+                placeholder="johnsmith@email.com"
+              />
+              <span className=" error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center">
+                Incorrect email
+              </span>
+            </label>
+
+            <label className=" mb-4 block tablet:ml-5 tablet:w-463px tablet:h-244px desktop:ml-0 desktop:w-606px   ">
+              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+                Message
+              </span>
+              <textarea className=" px-2 h-196px resize-none bg-inputBg w-full text-13 font-extralight leading-6 outline-none tablet:h-220px " />
+            </label>
+
+            <button
+              className=" ml-auto block w-20 uppercase text-3xl font-normal leading-normal hover:text-mainBtnBgHover transition-colors duration-300 desktop:text-32"
+              type="submit"
+              aria-label="Submit form button"
+            >
+              send
+            </button>
+          </form>
+        </div>
+      </Container>
+    </footer>
   </main>
 );
 

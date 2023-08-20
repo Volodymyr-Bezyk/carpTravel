@@ -62,12 +62,29 @@
   background-size: cover;
 }
 
+@layer components {
+  .aboutTextMob {
+    @apply text-sm font-extralight leading-5;
+  }
+  .aboutTextTab {
+    @apply tablet:text-base tablet:leading-tight;
+  }
+}
+
 .career {
   background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
     url('/careerBgMob.jpg');
 
   background-repeat: repeat-y;
   background-size: 103%;
+}
+
+.footer {
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    url('/footerBgMob.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .checkboxFrame::before {
@@ -82,12 +99,18 @@
   border: 3px solid black;
 }
 
+.error::before {
+  content: '';
+  background-image: url('/cross.svg');
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
+}
+
 @layer components {
-  .aboutTextMob {
-    @apply text-sm font-extralight leading-5;
-  }
-  .aboutTextTab {
-    @apply tablet:text-base tablet:leading-tight;
+  .footerSocialLink {
+    @apply inline-block text-sm leading-6 border-1 border-transparent hover:border-b-white transition-colors duration-300;
   }
 }
 
@@ -115,7 +138,7 @@
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
       ),
-      url('/careerBgMob480.jpg');
+      url('/careerBgMob4801.jpg');
     background-size: 100% 50%;
   }
 }
@@ -143,6 +166,13 @@
     background-position: center;
     background-size: cover;
   }
+  .footer {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/footerBgTab.jpg');
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -160,5 +190,19 @@
 
   .customHeroButtonBorder::after {
     background-image: url('/btnFrameDesk.svg');
+  }
+  .career {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/careerBgDesk.jpg');
+  }
+  .footer {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/footerBgDesk.jpg');
   }
 }

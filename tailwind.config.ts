@@ -14,6 +14,7 @@ const config: Config = {
       transparent: 'transparent',
       inputBg: 'rgba(255, 255, 255, 0.05)',
       black: '#000000',
+      error: '#FF5757',
     },
 
     fontFamily: {
@@ -28,6 +29,7 @@ const config: Config = {
 
     spacing: {
       px: '1px',
+      '2px': '2px',
       '14px': '14px',
       '20px': '20px',
       '22px': '22px',
@@ -35,12 +37,17 @@ const config: Config = {
       '66px': '66px',
       '71px': '71px',
       '72px': '72px',
+      '86px': '86px',
+      '90px': '90px',
+      '96px': '96px',
       '104px': '104px',
       '146px': '146px',
       '196px': '196px',
       '220px': '220px',
       '230px': '230px',
+      '244px': '244px',
       '262px': '262px',
+      '268px': '268px',
       '294px': '294px',
       '296px': '296px',
       '305px': '305px',
@@ -49,8 +56,10 @@ const config: Config = {
       '408px': '408px',
       '426px': '426px',
       '436px': '436px',
-      '474px': '474px',
       '463px': '463px',
+      '466px': '466px',
+      '474px': '474px',
+      '482px': '482px',
       '529px': '529px',
       '606px': '606px',
       '646px': '646px',
@@ -120,6 +129,7 @@ const config: Config = {
         36.48: '36.48px',
       },
       lineHeight: {
+        1.08: '1.08',
         1.83: '1.83',
         2.66: '2.66',
       },
