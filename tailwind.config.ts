@@ -12,6 +12,8 @@ const config: Config = {
       mainBtnBg: 'rgba(255, 255, 255, 0.10)',
       mainBtnBgHover: 'rgba(255, 255, 255, 0.20)',
       transparent: 'transparent',
+      inputBg: 'rgba(255, 255, 255, 0.05)',
+      black: '#000000',
     },
 
     fontFamily: {
@@ -27,20 +29,30 @@ const config: Config = {
     spacing: {
       px: '1px',
       '14px': '14px',
+      '20px': '20px',
+      '22px': '22px',
+      '53px': '53px',
       '66px': '66px',
+      '71px': '71px',
       '72px': '72px',
       '104px': '104px',
+      '146px': '146px',
+      '196px': '196px',
       '220px': '220px',
       '230px': '230px',
       '262px': '262px',
+      '294px': '294px',
+      '296px': '296px',
       '305px': '305px',
       '345px': '345px',
       '376px': '376px',
       '408px': '408px',
       '426px': '426px',
       '436px': '436px',
+      '474px': '474px',
       '463px': '463px',
       '529px': '529px',
+      '606px': '606px',
       '646px': '646px',
       0: '0',
       0.5: '0.125rem',
@@ -80,13 +92,11 @@ const config: Config = {
       auto: 'auto',
     },
 
-    borderRadius: {
-      '4xl': '2rem',
-    },
-
     extend: {
       fontSize: {
         10: '10px',
+        13: '13px',
+        32: '32px',
         37: '37px',
         40: '40px',
         67: '67px',
@@ -97,8 +107,11 @@ const config: Config = {
         0.32: '0.32px',
         1.26: '1.26px',
         1.4: '1.4px',
+        1.44: '1.44px',
         1.6: '1.6px',
         1.67: '1.67px',
+        2.11: '2.11px',
+        2.4: '2.4px',
         2.68: '2.68px',
         3.92: '3.92px',
         8.71: '8.71px',
@@ -107,6 +120,7 @@ const config: Config = {
         36.48: '36.48px',
       },
       lineHeight: {
+        1.83: '1.83',
         2.66: '2.66',
       },
       width: {
@@ -115,6 +129,10 @@ const config: Config = {
       maxWidth: {
         480: '480px',
       },
+    },
+    borderWidth: {
+      1: '1px',
+      3: '3px',
     },
   },
   plugins: [],
