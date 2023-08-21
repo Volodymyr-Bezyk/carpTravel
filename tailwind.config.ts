@@ -68,6 +68,7 @@ const config: Config = {
       '474px': '474px',
       '482px': '482px',
       '484px': '484px',
+      '498px': '498px',
       '529px': '529px',
       '606px': '606px',
       '646px': '646px',
