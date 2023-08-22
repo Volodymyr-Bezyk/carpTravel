@@ -319,4 +319,8 @@
   .formButton {
     @apply uppercase text-3xl font-normal leading-normal hover:text-mainBtnBgHover transition-colors duration-300 desktop:text-32;
   }
+  .error {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
 }

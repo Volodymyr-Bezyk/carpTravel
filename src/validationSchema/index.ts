@@ -8,6 +8,10 @@ export const footerValidationSchema = yup.object().shape({
       'Name must contain at least one space followed by a non-space character and cannot start with a space'
     )
     .required('Name is required'),
-  email: yup.string().email().required(),
+  email: yup
+    .string()
+    .email()
+    .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
+    .required(),
   message: yup.string(),
 });

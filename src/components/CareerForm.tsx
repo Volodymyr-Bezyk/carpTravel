@@ -26,8 +26,8 @@ const CareerForm = () => {
   const onSubmit: SubmitHandler<CareerFormDataTypes> = data =>
     console.log('submit', data);
 
-  const data = watch();
-  console.log('watch', data, 'errors', errors);
+  // const data = watch();
+  // console.log('watch', data, 'errors', errors);
 
   return (
     <form

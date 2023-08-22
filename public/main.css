@@ -966,6 +966,11 @@ video {
   }
 }
 
+.error {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1152,10 +1157,6 @@ video {
   resize: none;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .place-items-center {
   place-items: center;
 }
@@ -1280,10 +1281,6 @@ video {
   font-family: Inter, sans-serif;
 }
 
-.text-13 {
-  font-size: 13px;
-}
-
 .text-33 {
   font-size: 33px;
 }
@@ -1389,6 +1386,22 @@ video {
   opacity: 0.6;
 }
 
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-95 {
+  opacity: 0.95;
+}
+
 .shadow-galleryShadow {
   --tw-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   --tw-shadow-colored: 0px 4px 4px 0px var(--tw-shadow-color);
@@ -1414,6 +1427,12 @@ video {
 
 .transition-opacity {
   transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1695,20 +1714,8 @@ video {
   }
 }
 
-.placeholder\:text-opacity-20::-moz-placeholder {
-  --tw-text-opacity: 0.2;
-}
-
-.placeholder\:text-opacity-20::placeholder {
-  --tw-text-opacity: 0.2;
-}
-
-.placeholder\:opacity-20::-moz-placeholder {
-  opacity: 0.2;
-}
-
-.placeholder\:opacity-20::placeholder {
-  opacity: 0.2;
+.focus-within\:opacity-100:focus-within {
+  opacity: 1;
 }
 
 .hover\:bg-mainBtnBgHover:hover {
@@ -1725,6 +1732,14 @@ video {
 
 .focus\:bg-mainBtnBgHover:focus {
   background-color: rgba(255, 255, 255, 0.20);
+}
+
+.focus\:opacity-100:focus {
+  opacity: 1;
+}
+
+.disabled\:pointer-events-none:disabled {
+  pointer-events: none;
 }
 
 .peer:checked ~ .peer-checked\:bg-white {
@@ -2086,10 +2101,6 @@ video {
     margin-bottom: 2rem;
   }
 
-  .desktop\:mb-9 {
-    margin-bottom: 2.25rem;
-  }
-
   .desktop\:mb-auto {
     margin-bottom: auto;
   }
@@ -2293,10 +2304,6 @@ video {
     padding-right: 368px;
   }
 
-  .desktop\:pt-104px {
-    padding-top: 104px;
-  }
-
   .desktop\:pt-6 {
     padding-top: 1.5rem;
   }
@@ -2323,11 +2330,6 @@ video {
 
   .desktop\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .desktop\:text-xl {
-    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 

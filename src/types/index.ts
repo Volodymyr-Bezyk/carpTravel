@@ -26,7 +26,7 @@ export interface FormInputProps {
   placeholderValue?: string;
   errorMsg?: string;
   labelStyles?: string;
-  err?: any;
+  err?: string;
   field?: object;
 }
 
@@ -35,6 +35,7 @@ export interface FormSubmitBtnProps {
   customStyles?: string;
   handleClick?: React.FormEvent<HTMLFormElement>;
   aria: string;
+  disabled: boolean;
 }
 
 export interface FooterFormDataTypes {

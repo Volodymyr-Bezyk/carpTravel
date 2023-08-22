@@ -12,7 +12,6 @@ const FooterForm = () => {
     handleSubmit,
     control,
     reset,
-    watch,
     formState: { errors },
   } = useForm<FooterFormDataTypes>({
     mode: 'onChange',
@@ -25,12 +24,9 @@ const FooterForm = () => {
   });
 
   const onSubmit: SubmitHandler<FooterFormDataTypes> = data => {
-    console.log('submit', data);
+    console.log('submitFooterForm', data);
     reset({ name: '', email: '', message: '' });
   };
-
-  const data = watch();
-  console.log('watch', data, 'errors', errors);
 
   return (
     <form
@@ -47,7 +43,7 @@ const FooterForm = () => {
             placeholderValue="John Smith"
             errorMsg="Invalid name"
             labelStyles="mb-6 tablet:mb-7 tablet:w-56 desktop:w-294px desktop:mb-0"
-            err={errors.name}
+            err={errors.name?.message ? errors.name?.message : ''}
             field={field}
           />
         )}
@@ -63,7 +59,7 @@ const FooterForm = () => {
             placeholderValue="johnsmith@email.com"
             errorMsg="Incorrect email"
             labelStyles="mb-6 tablet:w-56 desktop:w-294px desktop:mb-0 desktop:ml-auto"
-            err={errors.email}
+            err={errors.email?.message ? errors.email?.message : ''}
             field={field}
           />
         )}
@@ -89,6 +85,7 @@ const FooterForm = () => {
         text="send"
         aria="send form data"
         customStyles="ml-auto block w-20 tablet:w-auto"
+        disabled={Object.keys(errors).length > 0 ? true : false}
       />
     </form>
   );
