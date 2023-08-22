@@ -1412,6 +1412,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1711,6 +1717,10 @@ video {
 
 .hover\:text-mainBtnBgHover:hover {
   color: rgba(255, 255, 255, 0.20);
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .focus\:bg-mainBtnBgHover:focus {

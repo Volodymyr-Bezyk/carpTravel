@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import { Section, Container } from '@/components';
 
@@ -21,7 +22,7 @@ const Hero = () => (
 
                 <div className=" tablet:order-first tablet:w-426px tablet:h-full tablet:flex tablet:flex-col tablet:justify-between desktop:w-646px">
                     <h1 className=" mb-6 w-72 heroTitle tablet:mb-0 tablet:w-426px  desktop:w-646px  ">
-                        <strong className=" font-medium">Uncover</strong>{ ' ' }
+                        <strong className=" font-medium">Uncover{ " " }</strong>
                         Carpathian&rsquo;s Secrets
                     </h1>
                     <p className=" heroPlaceList mb-6 w-40  tablet:mb-0 tablet:w-72 desktop:w-646px  ">
@@ -36,14 +37,14 @@ const Hero = () => (
                         the Carpathians. Enjoy stunning views, exciting expeditions, and
                         the best service!
                     </p>
-                    <a
+                    <Link
                         className=" relative w-full h-53px max-w-xs ml-auto mr-auto block px-16 py-4.5 text-center text-lg font-bold leading-none bg-mainBtnBg customHeroButtonBorder hover:bg-mainBtnBgHover focus:bg-mainBtnBgHover transition-colors duration-300 tablet:py-14px tablet:leading-normal desktop:py-4 desktop:text-32 desktop:h-71px"
                         href='#contacts'
                         rel="noopener noreferrer nofollow"
                         aria-label="Join now link"
                     >
                         JOIN NOW
-                    </a>
+                    </Link>
                 </div>
             </div>
         </Container>
