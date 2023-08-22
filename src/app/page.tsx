@@ -1,85 +1,18 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Img01 from '@/../public/services/01.jpg';
-import Container from '@/components/Container';
+import { Header, Hero } from '@/sections';
+import { Container, MobileMenu, MobileMenuBtn } from '@/components';
 
 const Home = () => (
   <main>
-    <div className="hero responsive">
-      {/* *********HEADER */ }
-      <header className=" pt-9 tablet:pt-6">
-        <Container>
-          <div className="flex justify-between items-center">
-            <a href="#hero" rel="noopener noreferrer nofollow">
-              <Image
-                src="/Logo.svg"
-                alt="Company logo"
-                width={ 58 }
-                height={ 33 }
-              />
-            </a>
-            <button
-              className=" uppercase text-sm  leading-normal tracking-widest tablet:hidden"
-              type="button"
-              aria-label="open mobile menu"
-            >
-              menu
-            </button>
-            <nav className=" hidden tablet:block" aria-label="Main navigation">
-              <ul className=" flex gap-6 desktop:gap-14">
-                <li>
-                  <a
-                    href="#about"
-                    rel="noopener noreferrer nofollow"
-                    className=" headerNavLink"
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    rel="noopener noreferrer nofollow"
-                    className=" headerNavLink"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#career"
-                    rel="noopener noreferrer nofollow"
-                    className=" headerNavLink"
-                  >
-                    Career
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#gallery"
-                    rel="noopener noreferrer nofollow"
-                    className=" headerNavLink"
-                  >
-                    Gallery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#footer"
-                    rel="noopener noreferrer nofollow"
-                    className=" headerNavLink"
-                  >
-                    Contacts
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </Container>
-      </header>
+    <div className="hero responsive relative">
+      <Header />
+      <Hero />
 
       {/* ******HERO SECTION */ }
-      <section
+      {/* <section
         className=" pt-9 pb-14 tablet:pt-66px tablet:pb-16 desktop:pt-72px desktop:pb-104px"
         id="hero"
       >
@@ -112,17 +45,18 @@ const Home = () => (
                 the Carpathians. Enjoy stunning views, exciting expeditions, and
                 the best service!
               </p>
-              <button
-                className=" relative w-full h-53px max-w-xs ml-auto mr-auto block px-16 py-4.5 text-lg font-bold leading-none bg-mainBtnBg customHeroButtonBorder hover:bg-mainBtnBgHover focus:bg-mainBtnBgHover transition-colors duration-300 tablet:py-14px tablet:leading-normal desktop:py-4 desktop:text-32 desktop:h-71px"
-                type="button"
-                aria-label="Join now button"
+              <a
+                className=" relative w-full h-53px max-w-xs ml-auto mr-auto block px-16 py-4.5 text-center text-lg font-bold leading-none bg-mainBtnBg customHeroButtonBorder hover:bg-mainBtnBgHover focus:bg-mainBtnBgHover transition-colors duration-300 tablet:py-14px tablet:leading-normal desktop:py-4 desktop:text-32 desktop:h-71px"
+                href='#contacts'
+                rel="noopener noreferrer nofollow"
+                aria-label="Join now link"
               >
                 JOIN NOW
-              </button>
+              </a>
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
     </div>
 
     {/* **********ABOUT SECTION */ }
@@ -152,6 +86,9 @@ const Home = () => (
             provide new perspectives. Therefore, each of our tours is aimed at
             unlocking your potential, enriching your spiritual world and
             creating unforgettable memories.
+
+
+
           </p>
 
           <div className="  ml-auto w-45 tablet:order-first tablet:ml-0 tablet:w-56 desktop:order-last desktop:mt-auto desktop:w-296px desktop:translate-y-146px">
@@ -172,7 +109,7 @@ const Home = () => (
 
     {/* ******SERVICES SECTION */ }
     <section
-      className=" py-14 services responsive tablet:py-16 desktop:py-104px"
+      className=" services responsive py-14 tablet:py-16 desktop:py-104px"
       id="services"
     >
       <Container>
@@ -265,7 +202,7 @@ const Home = () => (
               <h4 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 ">
                 Professional development
               </h4>
-              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6">
+              <p className=" opacity-60 text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6">
                 We offer growth opportunities and a creative environment to
                 nurture your talents.
               </p>
@@ -274,7 +211,7 @@ const Home = () => (
               <h4 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0">
                 Teamwork
               </h4>
-              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
+              <p className="opacity-60 text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
                 Join our close-knit family, where support and inspiration
                 abound.
               </p>
@@ -283,7 +220,7 @@ const Home = () => (
               <h4 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 ">
                 Stimulating work environment
               </h4>
-              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
+              <p className="opacity-60 text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
                 Flexibility and remote options for a comfortable experience.
               </p>
             </li>
@@ -291,7 +228,7 @@ const Home = () => (
               <h4 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 ">
                 Exciting challenges
               </h4>
-              <p className=" text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
+              <p className="opacity-60 text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6 ">
                 Unleash your potential through unforgettable projects showcasing
                 Carpathian beauty.
               </p>
@@ -304,11 +241,11 @@ const Home = () => (
               join our team!
             </p>
             <label className=" relative mb-4 block desktop:mb-6">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className=" opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 Full name
               </span>
               <input
-                className="formInputText px-2 bg-inputBg w-full placeholder:text-opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
+                className="formInputText px-2 bg-inputBg w-full placeholder:opacity-20 text-13 font-extralight leading-6 outline-none desktop:text-xl desktop:leading-6 desktop:py-2px"
                 type="text"
                 placeholder="John Smith"
               />
@@ -318,11 +255,11 @@ const Home = () => (
             </label>
 
             <label className=" relative mb-4 block desktop:mb-6">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 E-mail
               </span>
               <input
-                className="formInputText px-2 bg-inputBg w-full placeholder:text-opacity-20 outline-none desktop:py-2px"
+                className="formInputText px-2 bg-inputBg w-full placeholder:opacity-20 outline-none desktop:py-2px"
                 type="email"
                 placeholder="johnsmith@email.com"
               />
@@ -332,22 +269,22 @@ const Home = () => (
             </label>
 
             <label className=" mb-4 block desktop:mb-6">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 Position
               </span>
               <input
-                className="formInputText px-2 bg-inputBg w-full placeholder:text-opacity-20 outline-none desktop:py-2px"
+                className="formInputText px-2 bg-inputBg w-full placeholder:opacity-20 outline-none desktop:py-2px"
                 type="text"
                 placeholder="Movie maker"
               />
             </label>
 
             <label className=" relative mb-4 block desktop:mb-9">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 Phone
               </span>
               <input
-                className="formInputText px-2 bg-inputBg w-full placeholder:text-opacity-20 outline-none desktop:py-2px"
+                className="formInputText px-2 bg-inputBg w-full placeholder:opacity-20 outline-none desktop:py-2px"
                 type="tel"
                 placeholder="+ 38 (097) 12 34 567"
               />
@@ -357,7 +294,7 @@ const Home = () => (
             </label>
 
             <label className=" mb-4 block tablet:ml-5 tablet:w-220px tablet:order-2 tablet:mt-auto tablet:mb-2 desktop:w-294px desktop:mb-8 desktop:ml-6 ">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 Message
               </span>
               <textarea className="formInputText px-2 h-196px resize-none bg-inputBg w-full outline-none tablet:h-230px desktop:py-2px desktop:h-268px" />
@@ -366,7 +303,7 @@ const Home = () => (
             <label className=" mb-4 flex tablet:mb-0">
               <input className=" hidden peer" type="checkbox" />
               <span className=" checkboxFrame relative shrink-0 w-22px h-22px border-1 border-white bg-inputBg peer-checked:bg-white transition-colors duration-300"></span>
-              <p className=" ml-2 text-xs font-extralight leading-1.83 desktop:leading-6">
+              <p className=" opacity-60 ml-2 text-xs font-extralight leading-1.83 desktop:leading-6">
                 I confirm my consent to the processing of personal data.
               </p>
             </label>
@@ -400,16 +337,16 @@ const Home = () => (
                 height={ 250 }
                 src="https://s3-alpha-sig.figma.com/img/6df7/220e/14fc7939fe2cc296422c5658790ca536?Expires=1693785600&Signature=PVr9OeKF74mUIPZSyIB7q-SzKXaRCWjPaI4AC0XKTQeaJJTLv9Vb4TIA1W4fYIDcKFOHW6aPfiZwlCSnogJ5RDZ3ljF2D0WLgGEjGJzU2NOGm9tsD-dxMALU6XR6haZoge1ukuCVnReSVjArUabOX9Yd3uSsKxsD7oJII94gImU5F4CzqdizDFJ3HXTaTc9bBvmxiXz0YHskt0olKxJUFgIcAj0QcmdS69HyrJdLhrBpJc0hmgbTsqbhbzGWgyxiU8WgWMwl6dGCI9W6Fm1BRO4r1OwlC2lEIJEp5B3coNNgeSBmkCYPx~mEx6sPkQfh1jfjVgM3f3zAoPI~FAZ~lQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 alt="Mountains"
-                className="tablet:w-120px desktop:w-300px"
+                className="tablet:w-120px desktop:w-300px shadow-galleryShadow"
               />
             </div>
 
             <button
-              className=" hidden absolute bottom-4 left-0  w-full text-right text-33 font-thin leading-normal tablet:block desktop:bottom-0"
+              className="opacity-50 hidden absolute bottom-4 left-0  w-full text-right text-33 font-thin leading-normal tablet:block desktop:bottom-0"
               type="button"
               aria-label="Previous image"
             >
-              BACK{ ' ' }
+              BACK
             </button>
           </li>
 
@@ -432,15 +369,15 @@ const Home = () => (
                 height={ 250 }
                 src="https://s3-alpha-sig.figma.com/img/32ac/5b43/c0109965c0d25370810e123963404844?Expires=1693785600&Signature=XDeG13y04CdJ5tUNmggMtV7vmz9N9VwIHnMoSAfjsRmvIkbwR~meTDSRl~4JTwgPhaSUhGfRjhpSI2~Mxn5pd~kzT4CVQQlvRS2ezU8~F7KF2hS5DSsnF-eFrKr3mfAU4PEiQWK1ELTF-bHujVy~faJKT2oc0nrPTopvoCu9uERefwgrJIvrjT9KNmyyhcJI3qnknHArxMCZsLiAqrH3DgLwa2NCrJz0HRIPkupzUPXWb1rq9Y2a~Zlx5rnYCVuQmUvinyKwOJ0EY528YluDdOEziSF2VLKDzAYfGr0rzVMpgFQaH4Ih5hQXahf5rui~~FFc22Lg6BXKzXAicIxwjw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 alt="Mountains"
-                className=" tablet:w-120px desktop:w-300px"
+                className=" tablet:w-120px desktop:w-300px shadow-galleryShadow"
               />
             </div>
             <button
-              className="hidden absolute bottom-4 left-0 w-full text-left text-33 font-thin leading-normal tablet:block desktop:bottom-0"
+              className="opacity-50 hidden absolute bottom-4 left-0 w-full text-left text-33 font-thin leading-normal tablet:block desktop:bottom-0"
               type="button"
               aria-label="Next image"
             >
-              { ' ' }
+
               NEXT
             </button>
           </li>
@@ -451,7 +388,7 @@ const Home = () => (
     {/* *********FOOTER */ }
     <footer
       className="  responsive footer py-14 tablet:py-16 desktop:py-104px "
-      id="footer"
+      id="contacts"
     >
       <Container>
         <h2 className="sectionTitle mb-9 tablet:mb-9 tablet:leading-none desktop:mb-71px desktop:leading-normal ">
@@ -481,7 +418,7 @@ const Home = () => (
                   +38 (073) 12 34 567
                 </a>
               </div>
-              <p className=" w-86px text-xs font-extralight leading-5 desktop:leading-6">
+              <p className=" opacity-60 w-86px text-xs font-extralight leading-5 desktop:leading-6">
                 Phone number
               </p>
             </div>
@@ -496,13 +433,13 @@ const Home = () => (
               >
                 support@carptravel.com
               </a>
-              <p className=" w-86px ml-5 text-xs font-extralight leading-5 desktop:leading-6">
+              <p className="opacity-60 w-86px ml-5 text-xs font-extralight leading-5 desktop:leading-6">
                 E-mail
               </p>
             </div>
 
             <div className=" mb-3 flex justify-end items-baseline tablet:mb-0 tablet:ml-90px">
-              <p className=" mr-5  text-xs font-extralight leading-5 desktop:leading-6 desktop:order-last desktop:w-86px desktop:ml-5 desktop:mr-0">
+              <p className="opacity-60 mr-5  text-xs font-extralight leading-5 desktop:leading-6 desktop:order-last desktop:w-86px desktop:ml-5 desktop:mr-0">
                 Follow us
               </p>
               <ul>
@@ -556,7 +493,7 @@ const Home = () => (
 
           <form className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-305px desktop:flex-row desktop:h-auto desktop:w-606px ">
             <label className=" relative mb-6 block tablet:mb-7 tablet:w-56 desktop:w-294px desktop:mb-0 ">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 Full name
               </span>
               <input
@@ -570,7 +507,7 @@ const Home = () => (
             </label>
 
             <label className=" relative mb-6 block tablet:w-56 desktop:w-294px desktop:mb-0 desktop:ml-auto ">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 E-mail
               </span>
               <input
@@ -584,7 +521,7 @@ const Home = () => (
             </label>
 
             <label className=" mb-4 block tablet:ml-5 tablet:w-463px tablet:h-244px desktop:ml-0 desktop:w-606px desktop:mt-10   ">
-              <span className=" mb-1 block text-xs font-extralight leading-6 tracking-2.4">
+              <span className="opacity-60 mb-1 block text-xs font-extralight leading-6 tracking-2.4">
                 Message
               </span>
               <textarea className="formInputText px-2 h-196px resize-none bg-inputBg w-full outline-none tablet:h-220px desktop:py-2px" />
@@ -601,6 +538,10 @@ const Home = () => (
         </div>
       </Container>
     </footer>
+
+    {/* ***********MOBILE MENU */ }
+    <MobileMenu />
+
   </main>
 );
 

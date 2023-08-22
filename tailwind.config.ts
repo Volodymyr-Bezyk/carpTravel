@@ -17,6 +17,7 @@ const config: Config = {
       error: '#FF5757',
       galleryBg: 'rgba(2, 15, 8, 0.75)',
       secondaryText: 'rgba(255, 255, 255, 0.20)',
+      bgMobMenu: 'rgba(1, 10, 5, 0.75)',
     },
 
     fontFamily: {

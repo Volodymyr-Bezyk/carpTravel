@@ -51,6 +51,7 @@
   display: flex;
   align-items: center;
   opacity: 1;
+  font-weight: 500;
 }
 
 .activeService::before {
@@ -251,9 +252,6 @@
       url('/footerBgDesk.jpg');
   }
 }
-.responsive {
-  @apply md:max-w-480 ml-auto mr-auto tablet:max-w-screen-tablet desktop:max-w-screen-desktop;
-}
 
 @layer components {
   .headerNavLink {
@@ -281,7 +279,7 @@
     @apply opacity-50 text-right text-xs font-extralight leading-6 tracking-2.4 tablet:text-left;
   }
   .servicesButtonText {
-    @apply opacity-50 uppercase text-left text-xl font-extralight leading-0.85 tablet:text-22 desktop:text-28 desktop:leading-6;
+    @apply opacity-50 uppercase text-left text-xl font-extralight leading-0.85 hover:opacity-100 transition-opacity duration-300 tablet:text-22 desktop:text-28 desktop:leading-6;
   }
   .careerSubTitle {
     @apply uppercase text-3xl font-extralight leading-normal tablet:text-3xl desktop:text-4xl desktop:leading-1.08;
@@ -292,6 +290,13 @@
   .footerSocialLink {
     @apply inline-block text-sm leading-6 border-1 border-transparent hover:border-b-white transition-colors duration-300 tablet:text-base desktop:text-lg desktop:leading-6;
   }
+  .mobileMenuLink {
+    @apply text-lg leading-normal tracking-1.67 border-1 border-transparent hover:border-b-white transition-colors duration-300;
+  }
+}
+
+.responsive {
+  @apply md:max-w-480 ml-auto mr-auto tablet:max-w-screen-tablet desktop:max-w-screen-desktop;
 }
 
 @layer components {
@@ -309,7 +314,7 @@
     @apply opacity-80 text-sm font-extralight tablet:text-13 tablet:leading-5 desktop:text-lg desktop:leading-6;
   }
   .formInputText {
-    @apply text-13 font-extralight leading-6 desktop:text-xl desktop:leading-6;
+    @apply text-13 font-extralight leading-6 desktop:text-xl desktop:leading-6 placeholder:opacity-20;
   }
   .formButton {
     @apply uppercase text-3xl font-normal leading-normal hover:text-mainBtnBgHover transition-colors duration-300 desktop:text-32;
