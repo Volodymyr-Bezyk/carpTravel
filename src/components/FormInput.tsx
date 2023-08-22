@@ -7,6 +7,7 @@ const FormInput = ({
   placeholderValue,
   errorMsg,
   labelStyles,
+  err,
   field,
 }: FormInputProps) => (
   <label className={`relative mb-4 block desktop:mb-6 ${labelStyles}`}>

@@ -1,5 +1,4 @@
 import { MouseEventHandler } from 'react';
-// import { Field } from 'react-hook-form';
 
 export interface SectionProps {
   id: string;
@@ -27,6 +26,8 @@ export interface FormInputProps {
   placeholderValue?: string;
   errorMsg?: string;
   labelStyles?: string;
+  err?: any;
+  field?: object;
 }
 
 export interface FormSubmitBtnProps {
@@ -34,4 +35,16 @@ export interface FormSubmitBtnProps {
   customStyles?: string;
   handleClick?: React.FormEvent<HTMLFormElement>;
   aria: string;
+}
+
+export interface FooterFormDataTypes {
+  name: string;
+  email: string;
+  message: string | undefined;
+}
+
+export interface CareerFormDataTypes extends FooterFormDataTypes {
+  position: string;
+  tel: string;
+  agreement: string;
 }
