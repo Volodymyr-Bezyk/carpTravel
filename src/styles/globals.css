@@ -255,7 +255,7 @@
 
 @layer components {
   .headerNavLink {
-    @apply py-px no-underline border-1 border-transparent text-sm font-normal tracking-1.4 hover:border-b-white transition-colors duration-300;
+    @apply cursor-pointer py-px no-underline border-1 border-transparent text-sm font-normal tracking-1.4 hover:border-b-white transition-colors duration-300;
   }
   .heroTitle {
     @apply uppercase text-40 font-thin leading-snug -tracking-1.6 tablet:text-67 tablet:leading-normal tablet:-tracking-2.68 desktop:text-98 desktop:leading-tight desktop:-tracking-3.92;

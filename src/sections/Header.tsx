@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 
 import { menuLinks } from '@/constants';
 import { Container, MobileMenuBtn } from '@/components';
@@ -10,7 +11,14 @@ const Header = () => {
     <header className=" pt-9 tablet:pt-6">
       <Container>
         <div className="flex justify-between items-center">
-          <Link href="#hero" rel="noopener noreferrer nofollow">
+          <Link
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            to="hero"
+            rel="noopener noreferrer nofollow"
+          >
             <Image src="/Logo.svg" alt="Company logo" width={58} height={33} />
           </Link>
 
@@ -25,7 +33,11 @@ const Header = () => {
               {menuLinks.map(({ title, href, rel }) => (
                 <li key={title}>
                   <Link
-                    href={href}
+                    to={href}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
                     rel={rel}
                     className="headerNavLink"
                     aria-label={`link to ${title} section`}

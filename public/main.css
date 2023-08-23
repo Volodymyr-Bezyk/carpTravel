@@ -535,6 +535,7 @@ video {
 }
 
 .headerNavLink {
+  cursor: pointer;
   border-width: 1px;
   border-color: transparent;
   padding-top: 1px;
@@ -995,28 +996,16 @@ video {
   left: 0;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
 .right-0 {
   right: 0;
 }
 
 .top-0 {
   top: 0;
-}
-
-.left-2 {
-  left: 0.5rem;
-}
-
-.bottom-1 {
-  bottom: 0.25rem;
-}
-
-.bottom-0\.5 {
-  bottom: 0.125rem;
-}
-
-.left-1 {
-  left: 0.25rem;
 }
 
 .-mt-4 {
@@ -1169,6 +1158,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .resize-none {
   resize: none;
 }
@@ -1207,10 +1200,6 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.rounded-none {
-  border-radius: 0px;
 }
 
 .border-1 {
@@ -1273,52 +1262,16 @@ video {
   padding-bottom: 3.5rem;
 }
 
-.pt-9 {
-  padding-top: 2.25rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .pr-2 {
   padding-right: 0.5rem;
 }
 
-.pl-8 {
-  padding-left: 2rem;
-}
-
-.pl-20 {
-  padding-left: 5rem;
-}
-
-.pl-16 {
-  padding-left: 4rem;
-}
-
-.pl-12 {
-  padding-left: 3rem;
-}
-
-.pl-14 {
-  padding-left: 3.5rem;
-}
-
-.pl-53px {
-  padding-left: 53px;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pl-9 {
-  padding-left: 2.25rem;
+.pt-9 {
+  padding-top: 2.25rem;
 }
 
 .text-left {
@@ -1345,6 +1298,10 @@ video {
   font-family: Inter, sans-serif;
 }
 
+.text-13 {
+  font-size: 13px;
+}
+
 .text-33 {
   font-size: 33px;
 }
@@ -1366,10 +1323,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-13 {
-  font-size: 13px;
 }
 
 .font-bold {
@@ -2128,10 +2081,6 @@ video {
     bottom: 0.125rem;
   }
 
-  .desktop\:left-2 {
-    left: 0.5rem;
-  }
-
   .desktop\:order-last {
     order: 9999;
   }
@@ -2371,6 +2320,10 @@ video {
     padding-bottom: 1rem;
   }
 
+  .desktop\:pl-14 {
+    padding-left: 3.5rem;
+  }
+
   .desktop\:pr-368px {
     padding-right: 368px;
   }
@@ -2381,14 +2334,6 @@ video {
 
   .desktop\:pt-72px {
     padding-top: 72px;
-  }
-
-  .desktop\:pl-14 {
-    padding-left: 3.5rem;
-  }
-
-  .desktop\:pr-2 {
-    padding-right: 0.5rem;
   }
 
   .desktop\:text-left {
