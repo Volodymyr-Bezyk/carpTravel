@@ -324,3 +324,14 @@
     transition: opacity 300ms ease-in-out;
   }
 }
+
+/* .MuiTelInput-TextField {
+  @apply bg-inputBg;
+}
+
+.MuiInputBase-input {
+  @apply text-white outline-none;
+}
+.MuiTelInput-IconButton {
+  display: none;
+} */

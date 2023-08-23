@@ -45,7 +45,7 @@ export interface FooterFormDataTypes {
 }
 
 export interface CareerFormDataTypes extends FooterFormDataTypes {
-  position: string;
+  position: string | undefined;
   tel: string;
-  agreement: string;
+  agreement: boolean;
 }
