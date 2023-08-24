@@ -12,7 +12,7 @@ import {
 import { MobileMenu } from '@/components';
 
 const Home = () => (
-  <main>
+  <main className=" bg-galleryBg">
     <div className="hero responsive relative">
       <Header />
       <Hero />
@@ -20,9 +20,9 @@ const Home = () => (
 
     <About />
     <Services />
-    <SwiperTest />
     <Career />
     <Gallery />
+    <SwiperTest />
     <Contacts />
     <MobileMenu />
   </main>

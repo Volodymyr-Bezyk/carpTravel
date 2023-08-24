@@ -408,6 +408,9 @@
 }
 
 @layer components {
+  .section {
+    @apply py-14 tablet:py-16 desktop:py-104px;
+  }
   .sectionTitle {
     @apply uppercase text-40 font-thin leading-snug -tracking-1.6 tablet:text-67 tablet:-tracking-2.68 desktop:text-98 desktop:-tracking-3.92;
   }
@@ -433,28 +436,28 @@
   }
 }
 
-.swiper {
-  /* @apply h-[918px] sm1:h-[928px] sm2:h-[963px] sm3:h-[985px] md:h-[1006px] tablet:h-[656px] desktop:h-[891px]; */
-}
-.swiper-slide {
+.servicesSlide {
   @apply h-full w-full;
 }
-.swiper-wrapper {
-  @apply w-full relative grid;
+.gallerySlide {
+  width: auto !important;
+  /* height: auto !important; */
+  /* margin-left: 20; */
+  /* margin-right: 20; */
+  /* @apply w-[400px]; */
 }
 
-.gradient::before {
-  /* content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
-  z-index: 2; */
+.swiper-slide-active {
+  /* margin-left: 20px;
+  margin-right: 70px; */
+  /* height: 600px;
+  width: 900px; */
+  /* height: 430px; */
 }
 
-.serviceBg {
-  /* height: 100%;
-  width: 100%; */
+.swiper-slide {
+  /* background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px; */
 }

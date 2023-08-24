@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { SectionProps } from '@/types'
+import { SectionProps } from '@/types';
 
-const Section = ( { children, id, customStyles }: SectionProps ) => <section
-    className={ `py-14 tablet:py-16 desktop:py-104px ${ customStyles }` }
-    id={ id }
->{ children }</section>
+const Section = ({ children, id, customStyles }: SectionProps) => (
+  <section className={`section ${customStyles}`} id={id}>
+    {children}
+  </section>
+);
 
-
-export default Section
+export default Section;
