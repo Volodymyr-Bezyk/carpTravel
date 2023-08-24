@@ -14,3 +14,11 @@ export function formatPhoneNumber(value: string) {
     return formattedValue.trim();
   }
 }
+
+export function formatNumberWithLeadingZero(num: number): string {
+  if ((num += 1) < 10) {
+    return `0${num}`;
+  }
+
+  return num.toString();
+}

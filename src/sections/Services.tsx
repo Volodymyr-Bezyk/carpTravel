@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
+
 import Img01 from '@/../public/services/01.jpg';
 import { Section, Container, SectionTitle } from '@/components';
 

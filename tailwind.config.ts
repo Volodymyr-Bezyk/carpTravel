@@ -26,6 +26,9 @@ const config: Config = {
     },
     screens: {
       sm: '320px',
+      sm1: '370px',
+      sm2: '400px',
+      sm3: '450px',
       md: '480px',
       tablet: '768px',
       desktop: '1440px',

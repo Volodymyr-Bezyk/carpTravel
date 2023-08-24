@@ -6,6 +6,7 @@ import {
   Career,
   Gallery,
   Contacts,
+  SwiperTest,
 } from '@/sections';
 
 import { MobileMenu } from '@/components';
@@ -19,6 +20,7 @@ const Home = () => (
 
     <About />
     <Services />
+    <SwiperTest />
     <Career />
     <Gallery />
     <Contacts />

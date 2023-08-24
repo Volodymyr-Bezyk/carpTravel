@@ -43,10 +43,46 @@
 .services {
   background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
     url('/servicesBgMob1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
+
+.servicesBg1 {
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    url('/servicesBgMob1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.servicesBg2 {
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    url('/servicesBgMob2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.servicesBg3 {
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    url('/servicesBgMob3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.servicesBg4 {
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    url('/servicesBgMob4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.servicesBg5 {
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
+    url('/servicesBgMob5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .activeService {
   display: flex;
   align-items: center;
@@ -138,6 +174,42 @@
       url('/servicesBgTab1.jpg');
   }
 
+  .servicesBg1 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgTab1.jpg');
+  }
+  .servicesBg2 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgTab2.jpg');
+  }
+  .servicesBg3 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgTab3.jpg');
+  }
+  .servicesBg4 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgTab4.jpg');
+  }
+  .servicesBg5 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgTab5.jpg');
+  }
+
   .career {
     background-image: linear-gradient(
         rgba(2, 15, 8, 0.75),
@@ -227,6 +299,42 @@
         rgba(2, 15, 8, 0.75)
       ),
       url('/servicesBgDesk1.jpg');
+  }
+
+  .servicesBg1 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgDesk1.jpg');
+  }
+  .servicesBg2 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgDesk2.jpg');
+  }
+  .servicesBg3 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgDesk3.jpg');
+  }
+  .servicesBg4 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgDesk4.jpg');
+  }
+  .servicesBg5 {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/servicesBgDesk5.jpg');
   }
 
   .career {
@@ -325,13 +433,28 @@
   }
 }
 
-/* .MuiTelInput-TextField {
-  @apply bg-inputBg;
+.swiper {
+  /* @apply h-[918px] sm1:h-[928px] sm2:h-[963px] sm3:h-[985px] md:h-[1006px] tablet:h-[656px] desktop:h-[891px]; */
+}
+.swiper-slide {
+  @apply h-full w-full;
+}
+.swiper-wrapper {
+  @apply w-full relative grid;
 }
 
-.MuiInputBase-input {
-  @apply text-white outline-none;
+.gradient::before {
+  /* content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
+  z-index: 2; */
 }
-.MuiTelInput-IconButton {
-  display: none;
-} */
+
+.serviceBg {
+  /* height: 100%;
+  width: 100%; */
+}

@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className=" pt-9 tablet:pt-6">
       <Container>
-        <div className="flex justify-between items-center">
+        <div className=" cursor-pointer flex justify-between items-center">
           <Link
             spy={true}
             smooth={true}
