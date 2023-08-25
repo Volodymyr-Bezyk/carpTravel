@@ -1,3 +1,5 @@
+import { string } from 'yup';
+
 export interface SectionProps {
   id: string;
   children: React.ReactNode;
@@ -53,4 +55,27 @@ export interface CareerFormDataTypes extends FooterFormDataTypes {
   position: string | undefined;
   tel: string;
   agreement: boolean;
+}
+
+export interface ServiceProps {
+  order?: number;
+  call: string;
+  srcMob: string;
+  srcTab: string;
+  srcDesk: string;
+  callPosition: string;
+  desc: string;
+  bg?: string;
+}
+
+export interface ServicesButtonsListProps {
+  index: number;
+  swiperRef: any;
+}
+
+export interface ServicesImgProps {
+  srcMob: string;
+  srcTab: string;
+  srcDesk: string;
+  call: string;
 }

@@ -1212,6 +1212,10 @@ video {
   resize: none;
 }
 
+.resize {
+  resize: both;
+}
+
 .place-items-center {
   place-items: center;
 }
@@ -1633,7 +1637,7 @@ video {
 
 .scroll-to-top.scrollUp {
   bottom: 20px;
-  right: calc((100% - 320px) / 2 + 20px);
+  right: 20px;
   background-color: rgba(2, 15, 8, 0.75);
   box-shadow: none !important;
 }
@@ -2178,10 +2182,6 @@ video {
 
   .tablet\:max-w-screen-tablet {
     max-width: 768px;
-  }
-
-  .tablet\:grid-flow-col {
-    grid-auto-flow: column;
   }
 
   .tablet\:flex-col {
