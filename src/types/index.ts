@@ -1,16 +1,21 @@
-import { MouseEventHandler } from 'react';
-
 export interface SectionProps {
   id: string;
   children: React.ReactNode;
   customStyles?: string;
 }
 
+export interface MobileMenuProps {
+  mobMenuOpen: boolean;
+  // handleClick: React.MouseEventHandler<HTMLButtonElement>;
+  handleClick: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 export interface MobileMenuBtnProps {
   text: string;
   btnType?: string;
   customStyles?: string;
-  handleClick?: MouseEventHandler<HTMLButtonElement>;
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
+
   aria: string;
 }
 

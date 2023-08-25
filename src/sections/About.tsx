@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Section, Container, SectionTitle } from '@/components';
 
-const About = () => (
+const About: React.FC = () => (
   <Section id="about" customStyles="about responsive">
     <Container>
       <div className=" tablet:flex tablet:flex-col tablet:flex-wrap tablet:content-between tablet:h-436px desktop:h-498px">

@@ -117,6 +117,12 @@
   background-position: center;
   background-size: cover;
 }
+.scroll-to-top.scrollUp {
+  bottom: 20px;
+  right: calc((100% - 320px) / 2 + 20px);
+  background-color: rgba(2, 15, 8, 0.75);
+  box-shadow: none !important;
+}
 
 @media screen and (max-width: 767px) {
   .swiperStyles {
@@ -148,8 +154,11 @@
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
       ),
-      url('/careerBgMob4801.jpg');
+      url('/careerBgMob480.jpg');
     background-size: 100% 50%;
+  }
+  .scroll-to-top.scrollUp {
+    right: calc((100% - 480px) / 2 + 20px);
   }
 }
 
@@ -264,6 +273,9 @@
       ),
       url('/footerBgTab.jpg');
   }
+  .scroll-to-top.scrollUp {
+    right: calc((100% - 768px) / 2 + 20px);
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -343,6 +355,9 @@
       ),
       url('/footerBgDesk.jpg');
   }
+  .scroll-to-top.scrollUp {
+    right: calc((100% - 1440px) / 2 + 20px);
+  }
 }
 
 @layer components {
@@ -414,6 +429,9 @@
   .formButton {
     @apply uppercase text-3xl font-normal leading-normal hover:text-mainBtnBgHover transition-colors duration-300 desktop:text-32;
   }
+  .centeredMobileMenu {
+    @apply fixed w-full h-full top-0 left-1/2 -translate-x-1/2 z-10;
+  }
   .error {
     opacity: 0;
     transition: opacity 300ms ease-in-out;
@@ -443,17 +461,8 @@
   background-image: none;
 }
 
-.swiper-slide-active {
-  /* margin-left: 20px;
-  margin-right: 70px; */
-  /* height: 600px;
-  width: 900px; */
-  /* height: 430px; */
-}
-
-.swiper-slide {
-  /* background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 400px; */
-}
+/* .scrollUp {
+  bottom: 20px !important;
+  right: 5% !important;
+  background-color: rgba(2, 15, 8, 0.75) !important;
+} */

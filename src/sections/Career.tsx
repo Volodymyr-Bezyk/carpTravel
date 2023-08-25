@@ -1,8 +1,9 @@
 import React from 'react';
-import { advantagesOptions } from '@/constants';
-import { Section, Container, SectionTitle, CareerForm } from '@/components';
 
-const Career = () => (
+import { Section, Container, SectionTitle, CareerForm } from '@/components';
+import { advantagesOptions } from '@/constants';
+
+const Career: React.FC = () => (
   <Section id="career" customStyles="responsive career desktop:pb-4">
     <Container>
       <div className=" tablet:flex tablet:mb-1 desktop:mb-6">

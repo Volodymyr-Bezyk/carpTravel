@@ -22,3 +22,9 @@ export function formatNumberWithLeadingZero(num: number): string {
 
   return num.toString();
 }
+
+export const swipeToSlide = (idx: number, swiperRef: any) => {
+  if (swiperRef.current) {
+    swiperRef.current.swiper.slideTo(idx, 300);
+  }
+};

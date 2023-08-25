@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Container, SectionTitle, FooterLinks, FooterForm } from '@/components';
 
-const Contacts = () => (
+const Contacts: React.FC = () => (
   <footer
     className="  responsive footer py-14 tablet:py-16 desktop:py-104px "
     id="contacts"

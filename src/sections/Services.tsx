@@ -1,25 +1,19 @@
 'use client';
-import React from 'react';
-import { useRef } from 'react';
-import Image from 'next/image';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, A11y } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-import { servicesInfo, serviceBtns } from '@/constants';
-import { formatNumberWithLeadingZero } from '@/utils';
+import React, { useRef } from 'react';
+import Image from 'next/image';
+
 import { Section, Container, SectionTitle } from '@/components';
+import { servicesInfo, serviceBtns } from '@/constants';
+import { formatNumberWithLeadingZero, swipeToSlide } from '@/utils';
 
-const Services = () => {
+const Services: React.FC = () => {
   const swiperRef: any = useRef(null);
-
-  const swipeToSlide = (idx: number, swiperRef: any) => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideTo(idx, 300);
-    }
-  };
 
   return (
     <Section

@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
 import { Link } from 'react-scroll';
 
+import React from 'react';
 import { Section, Container } from '@/components';
 
-const Hero = () => (
+const Hero: React.FC = () => (
   <Section
     id="hero"
     customStyles="pt-9 pb-14 tablet:pt-66px tablet:pb-16 desktop:pt-72px desktop:pb-104px"
@@ -44,7 +44,6 @@ const Hero = () => (
             offset={50}
             duration={500}
             to="contacts"
-            rel="noopener noreferrer nofollow"
             aria-label="Join now link"
           >
             JOIN NOW

@@ -1,3 +1,6 @@
+'use client';
+import ScrollToTop from 'react-scroll-to-top';
+
 import {
   Header,
   Hero,
@@ -6,13 +9,10 @@ import {
   Career,
   Gallery,
   Contacts,
-  SwiperTest,
 } from '@/sections';
 
-import { MobileMenu } from '@/components';
-
 const Home = () => (
-  <main className=" bg-galleryBg">
+  <main className="bg-galleryBg relative">
     <div className="hero responsive relative">
       <Header />
       <Hero />
@@ -22,9 +22,8 @@ const Home = () => (
     <Services />
     <Career />
     <Gallery />
-    <SwiperTest />
     <Contacts />
-    <MobileMenu />
+    <ScrollToTop smooth component={<span>UP</span>} className="scrollUp" />
   </main>
 );
 

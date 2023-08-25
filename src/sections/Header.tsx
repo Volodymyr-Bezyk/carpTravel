@@ -1,33 +1,30 @@
 'use client';
-import React from 'react';
-import Image from 'next/image';
 import { Link } from 'react-scroll';
 
-import { menuLinks } from '@/constants';
-import { Container, MobileMenuBtn } from '@/components';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
-const Header = () => {
+import { Container, MobileMenuBtn, MobileMenu } from '@/components';
+import { menuLinks } from '@/constants';
+
+const Header: React.FC = () => {
+  const [mobMenuOpen, setMobMenuOpen] = useState(false);
+
   return (
     <header className=" pt-9 tablet:pt-6">
       <Container>
         <div className=" cursor-pointer flex justify-between items-center">
-          <Link
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            to="hero"
-            rel="noopener noreferrer nofollow"
-          >
+          <Link spy={true} smooth={true} offset={50} duration={500} to="hero">
             <Image src="/Logo.svg" alt="Company logo" width={58} height={33} />
           </Link>
-
           <MobileMenuBtn
             text="menu"
             aria="open mobile menu"
             customStyles="tablet:hidden"
+            handleClick={() => setMobMenuOpen(true)}
           />
 
+          <MobileMenu mobMenuOpen={mobMenuOpen} handleClick={setMobMenuOpen} />
           <nav className=" hidden tablet:block" aria-label="Main navigation">
             <ul className=" flex gap-6 desktop:gap-14">
               {menuLinks.map(({ title, href, rel }) => (
