@@ -1011,6 +1011,10 @@ video {
   bottom: 1rem;
 }
 
+.bottom-\[17px\] {
+  bottom: 17px;
+}
+
 .left-0 {
   left: 0;
 }
@@ -1025,6 +1029,10 @@ video {
 
 .top-0 {
   top: 0;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .-mt-4 {
@@ -1123,12 +1131,8 @@ video {
   height: 53px;
 }
 
-.h-\[225px\] {
-  height: 225px;
-}
-
-.h-\[300px\] {
-  height: 300px;
+.h-\[294px\] {
+  height: 294px;
 }
 
 .h-auto {
@@ -1137,10 +1141,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[430px\] {
-  height: 430px;
 }
 
 .w-20 {
@@ -1171,12 +1171,8 @@ video {
   width: 185px;
 }
 
-.w-\[312px\] {
-  width: 312px;
-}
-
-.w-\[606px\] {
-  width: 606px;
+.w-\[415px\] {
+  width: 415px;
 }
 
 .w-full {
@@ -1247,10 +1243,6 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .border-1 {
@@ -1556,12 +1548,6 @@ video {
   background-size: cover;
 }
 
-.services {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/servicesBgMob1.jpg');
-  background-size: cover;
-}
-
 .servicesBg1 {
   background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
     url('/servicesBgMob1.jpg');
@@ -1642,6 +1628,12 @@ video {
   background-size: cover;
 }
 
+@media screen and (max-width: 767px) {
+  .swiperStyles {
+    display: none !important;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .hero {
     background-image: linear-gradient(
@@ -1683,14 +1675,6 @@ video {
 
   .about {
     background-image: url('/aboutBgTab.jpg');
-  }
-
-  .services {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgTab1.jpg');
   }
 
   .servicesBg1 {
@@ -1814,14 +1798,6 @@ video {
       url('/aboutBgDesk.jpg');
   }
 
-  .services {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgDesk1.jpg');
-  }
-
   .servicesBg1 {
     background-image: linear-gradient(
         rgba(2, 15, 8, 0.75),
@@ -1917,10 +1893,21 @@ video {
 
 .gallerySlide {
   width: auto !important;
-  /* height: auto !important; */
-  /* margin-left: 20; */
-  /* margin-right: 20; */
-  /* @apply w-[400px]; */
+}
+
+.swiper-slide.gallerySlide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
+  z-index: 1;
+}
+
+.swiper-slide-active.gallerySlide::before {
+  background-image: none;
 }
 
 .swiper-slide-active {
@@ -2440,6 +2427,10 @@ video {
     height: 71px;
   }
 
+  .desktop\:h-\[430px\] {
+    height: 430px;
+  }
+
   .desktop\:h-auto {
     height: auto;
   }
@@ -2482,6 +2473,10 @@ video {
 
   .desktop\:w-86px {
     width: 86px;
+  }
+
+  .desktop\:w-\[606px\] {
+    width: 606px;
   }
 
   .desktop\:w-\[607px\] {
@@ -2539,9 +2534,24 @@ video {
     padding-right: 104px;
   }
 
+  .desktop\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .desktop\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .desktop\:px-56 {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+
+  .desktop\:px-\[24px\] {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .desktop\:py-0 {
@@ -2562,16 +2572,6 @@ video {
   .desktop\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .desktop\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .desktop\:px-\[24px\] {
-    padding-left: 24px;
-    padding-right: 24px;
   }
 
   .desktop\:pb-104px {
