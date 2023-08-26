@@ -4,10 +4,10 @@ import { serviceBtns } from '@/constants';
 import { ServicesButtonsListProps } from '@/types';
 import { swipeToSlide } from '@/utils';
 
-const ServicesButtonsList: React.FC<ServicesButtonsListProps> = ({
+const ServicesButtonsList = ({
   index,
   swiperRef,
-}) => {
+}: ServicesButtonsListProps) => {
   return (
     <ul className="grid gap-4 w-[185px] mb-9 tablet:order-first tablet:mb-6 tablet:w-220px desktop:w-64 desktop:gap-6 desktop:mb-230px ">
       {serviceBtns.map((option, idx) => (

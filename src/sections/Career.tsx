@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Section, Container, SectionTitle, CareerForm } from '@/components';
 import { advantagesOptions } from '@/constants';
+import { Section, Container, SectionTitle, CareerForm } from '@/components';
 
 const Career: React.FC = () => (
   <Section id="career" customStyles="responsive career desktop:pb-4">

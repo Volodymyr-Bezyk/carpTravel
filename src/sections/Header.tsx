@@ -4,8 +4,8 @@ import { Link } from 'react-scroll';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-import { Container, MobileMenuBtn, MobileMenu } from '@/components';
 import { menuLinks } from '@/constants';
+import { Container, MobileMenuBtn, MobileMenu } from '@/components';
 
 const Header: React.FC = () => {
   const [mobMenuOpen, setMobMenuOpen] = useState(false);

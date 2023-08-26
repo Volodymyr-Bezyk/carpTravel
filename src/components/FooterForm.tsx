@@ -1,13 +1,14 @@
 'use client';
-import React from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+
+import React from 'react';
 
 import { footerValidationSchema } from '@/validationSchema';
 import { FooterFormDataTypes } from '@/types';
 import { FormInput, FormSubmitBtn } from '.';
 
-const FooterForm = () => {
+const FooterForm: React.FC = () => {
   const {
     handleSubmit,
     control,

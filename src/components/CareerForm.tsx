@@ -1,14 +1,15 @@
 'use client';
-import React from 'react';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+
+import React from 'react';
 
 import { careerValidationSchema } from '@/validationSchema';
 import { CareerFormDataTypes } from '@/types';
 import { formatPhoneNumber } from '@/utils';
 import { FormInput, FormSubmitBtn } from '.';
 
-const CareerForm = () => {
+const CareerForm: React.FC = () => {
   const {
     handleSubmit,
     control,

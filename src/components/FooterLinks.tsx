@@ -1,8 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { socialLinks } from '@/constants';
 
-const FooterLinks = () => (
+const FooterLinks: React.FC = () => (
   <div className=" tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-104px tablet:items-end tablet:content-around tablet:mb-16 desktop:flex-nowrap">
     <div className=" mb-6 flex justify-end items-baseline desktop:mb-16 ">
       <div className=" mr-5">

@@ -1,21 +1,15 @@
-import Image from 'next/image';
 import React from 'react';
 
-import { Container, SectionTitle, ServicesButtonsList, ServicesImg } from '.';
+import { formatNumberWithLeadingZero } from '@/utils';
 import { servicesInfo } from '@/constants';
-import { formatNumberWithLeadingZero, swipeToSlide } from '@/utils';
-import { ServiceProps } from '@/types';
+import { ServiceWithIndexProps } from '@/types';
+import { Container, SectionTitle, ServicesButtonsList, ServicesImg } from '.';
 
-interface ServiceWithIndexProps {
-  service: ServiceProps;
-  index: number;
-  swiperRef: any;
-}
-const ServicesSwiperSlide: React.FC<ServiceWithIndexProps> = ({
-  service: { order, call, srcMob, srcTab, srcDesk, desc },
+const ServicesSwiperSlide = ({
+  service: { order, call, srcMob, srcTab, srcDesk, desc, callPosition },
   index,
   swiperRef,
-}) => {
+}: ServiceWithIndexProps) => {
   return (
     <Container>
       <div className="tablet:flex tablet:justify-between tablet:mb-9">
@@ -42,7 +36,7 @@ const ServicesSwiperSlide: React.FC<ServiceWithIndexProps> = ({
         />
         <div className=" sm:h-[394px] md:h-[354px] tablet:h-auto tablet:w-220px tablet:flex tablet:flex-col desktop:w-606px desktop:h-484px desktop:flex-wrap desktop:relative">
           <p
-            className={`servicesCallText mt-3 mb-6 tablet:mt-0 tablet:mb-8 desktop:mb-0 desktop:w-294px desktop:absolute desktop:left-72 top-0 `}
+            className={`servicesCallText mt-3 mb-6 tablet:mt-0 tablet:mb-8 desktop:mb-0 desktop:mt-0 desktop:w-294px desktop:absolute desktop:left-72 callPosition${order}`}
           >
             {call}
           </p>

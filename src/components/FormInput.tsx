@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormInputProps } from '@/types';
 
-const FormInput = ({
+const FormInput: React.FC<FormInputProps> = ({
   labelText,
   inputType = 'text',
   placeholderValue,
@@ -9,7 +9,7 @@ const FormInput = ({
   labelStyles,
   err,
   field,
-}: FormInputProps) => {
+}) => {
   return (
     <label className={`relative mb-4 block desktop:mb-6 ${labelStyles}`}>
       <span

@@ -10,10 +10,10 @@ import 'swiper/css/navigation';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 
-import { GallerySliderButtons } from '.';
 import { galleryImages } from '@/constants';
+import { GallerySliderButtons } from '.';
 
-const GallerySlider = () => {
+const GallerySlider: React.FC = () => {
   const { width } = useWindowSize();
   const swiperRef: any = useRef(null);
 
@@ -42,7 +42,7 @@ const GallerySlider = () => {
         stretch: 0,
         depth: 350,
         scale: 0.55,
-        modifier: 1.32,
+        modifier: 0.8,
       }}
       navigation={{
         nextEl: '.nextSlide',

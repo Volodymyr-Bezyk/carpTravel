@@ -63,9 +63,15 @@ export interface ServiceProps {
   srcMob: string;
   srcTab: string;
   srcDesk: string;
-  callPosition: string;
+  callPosition?: number;
   desc: string;
   bg?: string;
+}
+
+export interface ServiceWithIndexProps {
+  service: ServiceProps;
+  index: number;
+  swiperRef: any;
 }
 
 export interface ServicesButtonsListProps {

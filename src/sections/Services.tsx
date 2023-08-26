@@ -7,8 +7,8 @@ import 'swiper/css/effect-fade';
 
 import React, { useRef } from 'react';
 
-import { Section, ServicesSwiperSlide } from '@/components';
 import { servicesInfo } from '@/constants';
+import { Section, ServicesSwiperSlide } from '@/components';
 
 const Services: React.FC = () => {
   const swiperRef: any = useRef(null);
