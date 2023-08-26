@@ -14,6 +14,7 @@ const GalleryMobileList: React.FC = () => {
             height={250}
             alt={`gallery image ${idx + 1}`}
             className="shadow-galleryShadow"
+            loading="lazy"
           />
         </li>
       ))}
