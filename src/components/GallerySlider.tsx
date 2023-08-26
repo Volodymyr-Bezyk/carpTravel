@@ -20,9 +20,11 @@ const GallerySlider: React.FC = () => {
   useEffect(() => {
     if (width !== null && width >= 1440 && swiperRef.current) {
       swiperRef.current.swiper.params.coverflowEffect.modifier = 0.8;
+      swiperRef.current.swiper.update();
     }
     if (width !== null && width < 1440 && swiperRef.current) {
       swiperRef.current.swiper.params.coverflowEffect.modifier = 1.32;
+      swiperRef.current.swiper.update();
     }
   }, [width]);
 
@@ -42,7 +44,7 @@ const GallerySlider: React.FC = () => {
         stretch: 0,
         depth: 350,
         scale: 0.55,
-        modifier: 0.8,
+        modifier: width !== null && width >= 1440 ? 0.8 : 1.32,
       }}
       navigation={{
         nextEl: '.nextSlide',

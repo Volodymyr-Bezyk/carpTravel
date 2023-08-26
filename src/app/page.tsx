@@ -2,16 +2,6 @@
 import ScrollToTop from 'react-scroll-to-top';
 import dynamic from 'next/dynamic';
 
-// import {
-// Header,
-// Hero,
-// About,
-// Services,
-// Career,
-// Gallery,
-// Contacts,
-// } from '@/sections';
-
 const Header = dynamic(() => import('../sections/Header'));
 const Hero = dynamic(() => import('../sections/Hero'));
 const About = dynamic(() => import('../sections/About'));
