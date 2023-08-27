@@ -12,7 +12,7 @@ const GalleryMobileList: React.FC = () => {
             src={src}
             width={460}
             height={250}
-            alt={`gallery image ${idx + 1}`}
+            alt={`gallery image with nature number ${idx + 1}`}
             className="shadow-galleryShadow"
             loading="lazy"
           />

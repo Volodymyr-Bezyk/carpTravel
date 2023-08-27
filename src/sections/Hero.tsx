@@ -44,7 +44,7 @@ const Hero: React.FC = () => (
             offset={50}
             duration={500}
             to="contacts"
-            aria-label="Join now link"
+            aria-label="Join now. Scroll to contacts section"
           >
             JOIN NOW
           </Link>

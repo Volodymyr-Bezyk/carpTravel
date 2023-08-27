@@ -13,8 +13,15 @@ const Header: React.FC = () => {
   return (
     <header className=" pt-9 tablet:pt-6">
       <Container>
-        <div className=" cursor-pointer flex justify-between items-center">
-          <Link spy={true} smooth={true} offset={50} duration={500} to="hero">
+        <div className="flex justify-between items-center">
+          <Link
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            to="hero"
+            aria-label="scroll to hero section"
+          >
             <Image src="/Logo.svg" alt="Company logo" width={58} height={33} />
           </Link>
           <MobileMenuBtn
@@ -25,7 +32,7 @@ const Header: React.FC = () => {
           />
 
           <MobileMenu mobMenuOpen={mobMenuOpen} handleClick={setMobMenuOpen} />
-          <nav className=" hidden tablet:block" aria-label="Main navigation">
+          <nav className=" hidden tablet:block">
             <ul className=" flex gap-6 desktop:gap-14">
               {menuLinks.map(({ title, href, rel }) => (
                 <li key={title}>
@@ -37,7 +44,7 @@ const Header: React.FC = () => {
                     duration={500}
                     rel={rel}
                     className="headerNavLink"
-                    aria-label={`link to ${title} section`}
+                    aria-label={`${title} link. Scroll to ${title} section`}
                   >
                     {title}
                   </Link>

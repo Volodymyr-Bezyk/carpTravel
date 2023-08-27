@@ -461,17 +461,17 @@
 }
 
 .callPosition1 {
-  @apply top-0;
+  @apply desktop:top-0;
 }
 .callPosition2 {
-  @apply top-[50px];
+  @apply desktop:top-[50px];
 }
 .callPosition3 {
-  @apply top-[100px];
+  @apply desktop:top-[100px];
 }
 .callPosition4 {
-  @apply top-[175px];
+  @apply desktop:top-[175px];
 }
 .callPosition5 {
-  @apply top-[225px];
+  @apply desktop:top-[225px];
 }

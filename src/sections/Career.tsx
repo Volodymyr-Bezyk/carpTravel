@@ -24,13 +24,20 @@ const Career: React.FC = () => (
       </h3>
 
       <div className=" tablet:flex ">
-        <ul className=" mb-28 w-45 text-right tablet:w-220px tablet:mr-5 tablet:mb-0 desktop:w-606px desktop:mr-6 ">
+        <ul
+          className=" mb-28 w-45 text-right tablet:w-220px tablet:mr-5 tablet:mb-0 desktop:w-606px desktop:mr-6 "
+          aria-label="List of advantages"
+        >
           {advantagesOptions.map(({ title, desc }) => (
             <li
               key={title}
               className=" mb-4 tablet:mb-6 desktop:flex desktop:justify-between"
+              aria-labelledby={`${title}`}
             >
-              <h4 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 ">
+              <h4
+                className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 "
+                id={title}
+              >
                 {title}
               </h4>
               <p className=" opacity-60 text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6">

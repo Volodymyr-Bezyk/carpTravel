@@ -11,7 +11,7 @@ import { servicesInfo } from '@/constants';
 import { Section, ServicesSwiperSlide } from '@/components';
 
 const Services: React.FC = () => {
-  const swiperRef: any = useRef(null);
+  const swiperRef: any = useRef<typeof Swiper | null>(null);
 
   return (
     <Section

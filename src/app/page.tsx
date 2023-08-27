@@ -22,7 +22,11 @@ const Home = () => (
     <Career />
     <Gallery />
     <Contacts />
-    <ScrollToTop smooth component={<span>UP</span>} className="scrollUp" />
+    <ScrollToTop
+      smooth
+      component={<span aria-label="Scroll to top of the page">UP</span>}
+      className="scrollUp"
+    />
   </main>
 );
 

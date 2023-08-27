@@ -8,7 +8,6 @@ export interface SectionProps {
 
 export interface MobileMenuProps {
   mobMenuOpen: boolean;
-  // handleClick: React.MouseEventHandler<HTMLButtonElement>;
   handleClick: React.Dispatch<React.SetStateAction<boolean>>;
 }
 

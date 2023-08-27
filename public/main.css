@@ -1269,6 +1269,10 @@ video {
   background-color: rgba(255, 255, 255, 0.10);
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1469,6 +1473,10 @@ video {
 
 .opacity-95 {
   opacity: 0.95;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .shadow-galleryShadow {
@@ -1930,24 +1938,26 @@ video {
   background-image: none;
 }
 
-.callPosition1 {
-  top: 0;
-}
+@media (min-width: 1440px) {
+  .callPosition1 {
+    top: 0;
+  }
 
-.callPosition2 {
-  top: 50px;
-}
+  .callPosition2 {
+    top: 50px;
+  }
 
-.callPosition3 {
-  top: 100px;
-}
+  .callPosition3 {
+    top: 100px;
+  }
 
-.callPosition4 {
-  top: 175px;
-}
+  .callPosition4 {
+    top: 175px;
+  }
 
-.callPosition5 {
-  top: 225px;
+  .callPosition5 {
+    top: 225px;
+  }
 }
 
 .hover\:bg-mainBtnBgHover:hover {

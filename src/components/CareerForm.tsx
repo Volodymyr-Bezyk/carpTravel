@@ -115,12 +115,14 @@ const CareerForm: React.FC = () => {
               {...field}
               value={formatPhoneNumber(field.value)}
               onChange={e => field.onChange(formatPhoneNumber(e.target.value))}
+              aria-label="Please enter your phone.This field is required"
             />
 
             <span
               className={` error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center ${
                 errors.tel && 'opacity-95'
               }`}
+              aria-label="Incorrect phone"
             >
               Incorrect phone
             </span>
@@ -143,6 +145,7 @@ const CareerForm: React.FC = () => {
             <textarea
               {...field}
               className="formInputText px-2 h-196px resize-none bg-inputBg w-full outline-none tablet:h-230px desktop:py-2px desktop:h-268px"
+              aria-label="Enter your message"
             />
           </label>
         )}
@@ -155,18 +158,21 @@ const CareerForm: React.FC = () => {
         render={({ field }) => (
           <label className=" mb-4 flex tablet:mb-0">
             <input
-              className="hidden peer"
+              className=" hidden peer"
               type="checkbox"
               {...field}
               checked={field.value}
               value={''}
               onChange={e => field.onChange(e.target.checked)}
+              aria-labelledby="checkboxText"
+              aria-label="This field is required"
             />
             <span className=" checkboxFrame relative shrink-0 w-22px h-22px border-1 border-white bg-inputBg peer-checked:bg-white transition-colors duration-300"></span>
             <p
               className={`opacity-60 ml-2 text-xs font-extralight leading-1.83 desktop:leading-6 transition-all duration-300 ${
                 errors.agreement && 'text-error'
               } ${errors.agreement && 'opacity-90'}`}
+              id="checkboxText"
             >
               I confirm my consent to the processing of personal data.
             </p>
@@ -176,7 +182,7 @@ const CareerForm: React.FC = () => {
 
       <FormSubmitBtn
         text="send"
-        aria="send form data"
+        aria="send form"
         customStyles="ml-auto block w-20 tablet:order-2 tablet:w-auto"
         disabled={Object.keys(errors).length > 0 ? true : false}
       />

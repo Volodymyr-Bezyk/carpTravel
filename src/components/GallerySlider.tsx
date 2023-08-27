@@ -15,7 +15,7 @@ import { GallerySliderButtons } from '.';
 
 const GallerySlider: React.FC = () => {
   const { width } = useWindowSize();
-  const swiperRef: any = useRef(null);
+  const swiperRef: any = useRef<typeof Swiper | null>(null);
 
   useEffect(() => {
     if (width !== null && width >= 1440 && swiperRef.current) {
@@ -38,7 +38,6 @@ const GallerySlider: React.FC = () => {
       loop={true}
       initialSlide={0}
       slidesPerView={'auto'}
-      slideToClickedSlide={true}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -58,7 +57,7 @@ const GallerySlider: React.FC = () => {
           <div className=" relative w-[415px] h-[294px] desktop:w-[606px] desktop:h-[430px]">
             <Image
               src={src}
-              alt={`gallery image ${idx + 1}`}
+              alt={`gallery image with nature number ${idx + 1}`}
               fill
               sizes="(max-width: 768px) 50vw, (min-width: 1200px) 70vw, 100vw"
               loading="lazy"

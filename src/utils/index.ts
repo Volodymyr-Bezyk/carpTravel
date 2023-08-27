@@ -1,4 +1,4 @@
-export function formatPhoneNumber(value: string) {
+export function formatPhoneNumber(value: string): string {
   const cleanedValue = value.replace(/[^\d]/g, '');
 
   if (cleanedValue.length <= 10) {
@@ -23,7 +23,7 @@ export function formatNumberWithLeadingZero(num: number): string {
   return num.toString();
 }
 
-export const swipeToSlide = (idx: number, swiperRef: any) => {
+export const swipeToSlide = (idx: number, swiperRef: any): void => {
   if (swiperRef.current) {
     swiperRef.current.swiper.slideTo(idx, 300);
   }

@@ -77,6 +77,7 @@ const FooterForm: React.FC = () => {
             <textarea
               {...field}
               className="formInputText px-2 h-196px resize-none bg-inputBg w-full outline-none tablet:h-220px desktop:py-2px"
+              aria-label="Enter your message"
             />
           </label>
         )}
@@ -84,7 +85,7 @@ const FooterForm: React.FC = () => {
 
       <FormSubmitBtn
         text="send"
-        aria="send form data"
+        aria="send form"
         customStyles="ml-auto block w-20 tablet:w-auto"
         disabled={Object.keys(errors).length > 0 ? true : false}
       />

@@ -21,7 +21,10 @@ const MobileMenu = ({ mobMenuOpen, handleClick }: MobileMenuProps) => {
           customStyles="block mb-28 ml-auto"
           handleClick={() => handleClick(false)}
         />
-        <menu className="grid gap-12 place-items-center">
+        <menu
+          className="grid gap-12 place-items-center"
+          aria-label="mobile menu"
+        >
           {menuLinks.map(({ title, href, rel }) => (
             <Link
               key={title}

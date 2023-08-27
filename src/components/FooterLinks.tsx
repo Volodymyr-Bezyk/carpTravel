@@ -36,7 +36,7 @@ const FooterLinks: React.FC = () => (
         href="mailto:support@carptravel.com"
         rel="noopener noreferrer nofollow"
         target="_blank"
-        aria-label="write email"
+        aria-label="send email"
       >
         support@carptravel.com
       </Link>
@@ -49,7 +49,7 @@ const FooterLinks: React.FC = () => (
       <p className="opacity-60 mr-5  text-xs font-extralight leading-5 desktop:leading-6 desktop:order-last desktop:w-86px desktop:ml-5 desktop:mr-0">
         Follow us
       </p>
-      <ul>
+      <ul aria-label="List of social links">
         {socialLinks.map(({ title, src }) => (
           <li key={title} className="w-86px desktop:text-right">
             <Link
@@ -57,7 +57,7 @@ const FooterLinks: React.FC = () => (
               href={src}
               rel="noopener noreferrer nofollow"
               target="_blank"
-              aria-label={`link to ${title}`}
+              aria-label={`link to social network ${title}`}
             >
               {title}
             </Link>

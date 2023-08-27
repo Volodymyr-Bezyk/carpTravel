@@ -12,7 +12,7 @@ const ServicesImg = ({ srcMob, srcTab, srcDesk, call }: ServicesImgProps) => {
         <source srcSet={srcMob} media="(max-width: 767px)" />
         <Image
           src={srcDesk}
-          alt={call}
+          alt={`Image of srvica with call text ${call}`}
           width={610}
           height={430}
           loading="lazy"
