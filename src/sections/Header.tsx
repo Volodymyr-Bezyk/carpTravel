@@ -21,6 +21,7 @@ const Header: React.FC = () => {
             duration={500}
             to="hero"
             aria-label="scroll to hero section"
+            className=" cursor-pointer"
           >
             <Image src="/Logo.svg" alt="Company logo" width={58} height={33} />
           </Link>
