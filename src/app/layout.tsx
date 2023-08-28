@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CarpTravel',
     description: 'Uncover secrets of the Carpathian mountains',
+    images: './favicon.ico',
+    url: 'https://carptravel-five.vercel.app/',
   },
 };
 
