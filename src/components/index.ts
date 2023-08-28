@@ -6,8 +6,8 @@ import SectionTitle from './SectionTitle';
 import CareerForm from './CareerForm';
 import FormInput from './FormInput';
 import FormSubmitBtn from './FormSubmitBtn';
-import FooterLinks from './FooterLinks';
-import FooterForm from './FooterForm';
+import ContactsLinks from './ContactsLinks';
+import ContactsForm from './ContactsForm';
 import ServicesSwiperSlide from './ServicesSwiperSlide';
 import ServicesButtonsList from './ServicesButtonsList';
 import ServicesImg from './ServicesImg';
@@ -24,8 +24,8 @@ export {
   CareerForm,
   FormInput,
   FormSubmitBtn,
-  FooterLinks,
-  FooterForm,
+  ContactsLinks,
+  ContactsForm,
   ServicesSwiperSlide,
   ServicesButtonsList,
   ServicesImg,

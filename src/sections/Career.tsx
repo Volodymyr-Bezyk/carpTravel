@@ -2,6 +2,7 @@ import React from 'react';
 
 import { advantagesOptions } from '@/constants';
 import { Section, Container, SectionTitle, CareerForm } from '@/components';
+import content from '../content/content.json';
 
 const Career: React.FC = () => (
   <Section id="career" customStyles="responsive career desktop:pb-4">
@@ -14,8 +15,7 @@ const Career: React.FC = () => (
         />
 
         <p className="simpleText text-start mb-9 ml-auto w-45 tablet:mb-0 tablet:w-56 tablet:text-13 tablet:leading-5 tablet:text-justify desktop:w-296px desktop:text-lg desktop:leading-6">
-          Your chance to join our passionate team in Carpathian tourism. Seeking
-          talented professionals to share our common mission.
+          {content.career.text}
         </p>
       </div>
 
@@ -24,15 +24,11 @@ const Career: React.FC = () => (
       </h3>
 
       <div className=" tablet:flex ">
-        <ul
-          className=" mb-28 w-45 text-right tablet:w-220px tablet:mr-5 tablet:mb-0 desktop:w-606px desktop:mr-6 "
-          aria-label="List of advantages"
-        >
+        <ul className=" mb-28 w-45 text-right tablet:w-220px tablet:mr-5 tablet:mb-0 desktop:w-606px desktop:mr-6 ">
           {advantagesOptions.map(({ title, desc }) => (
             <li
               key={title}
               className=" mb-4 tablet:mb-6 desktop:flex desktop:justify-between"
-              aria-labelledby={`${title}`}
             >
               <h4
                 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 "

@@ -20,20 +20,18 @@ const FormInput: React.FC<FormInputProps> = ({
         {labelText}
       </span>
       <input
-        className={`formInputText px-2 bg-inputBg w-full outline-none desktop:py-2px transition-all duration-300 ${
+        className={`formInputText px-2 bg-inputBg w-full desktop:py-2px transition-all duration-300 ${
           err && 'text-error'
         } ${err && 'opacity-95'}`}
         type={inputType || 'text'}
         placeholder={placeholderValue}
         {...field}
-        aria-label={`Please enter your ${labelText}`}
       />
       {errorMsg && (
         <span
           className={` error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center ${
             err && 'opacity-95'
           }`}
-          aria-label={`error message ${labelText} contain ${errorMsg}. This field is required`}
         >
           {errorMsg}
         </span>

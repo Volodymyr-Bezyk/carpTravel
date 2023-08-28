@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { Container, SectionTitle, FooterLinks, FooterForm } from '@/components';
+import {
+  Section,
+  Container,
+  SectionTitle,
+  ContactsLinks,
+  ContactsForm,
+} from '@/components';
 
 const Contacts: React.FC = () => (
-  <footer
-    className="  responsive footer py-14 tablet:py-16 desktop:py-104px "
-    id="contacts"
-  >
+  <Section customStyles="responsive contacts" id="contacts">
     <Container>
       <SectionTitle
         text="Contact"
@@ -15,11 +18,11 @@ const Contacts: React.FC = () => (
       />
 
       <div className=" desktop:flex desktop:items-start desktop:justify-between">
-        <FooterLinks />
-        <FooterForm />
+        <ContactsLinks />
+        <ContactsForm />
       </div>
     </Container>
-  </footer>
+  </Section>
 );
 
 export default Contacts;

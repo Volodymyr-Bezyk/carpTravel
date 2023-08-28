@@ -2,25 +2,21 @@ import Link from 'next/link';
 import React from 'react';
 import { socialLinks } from '@/constants';
 
-const FooterLinks: React.FC = () => (
+const ContactsLinks: React.FC = () => (
   <div className=" tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-104px tablet:items-end tablet:content-around tablet:mb-16 desktop:flex-nowrap">
     <div className=" mb-6 flex justify-end items-baseline desktop:mb-16 ">
       <div className=" mr-5">
         <Link
           className=" block text-sm leading-6 tablet:text-base desktop:text-lg desktop:leading-6 hover:text-mainBtnBgHover transition-colors duration-300"
           href="tel:+380981234567"
-          rel="noopener noreferrer nofollow"
           target="_blank"
-          aria-label="phone call"
         >
           +38 (098) 12 34 567
         </Link>
         <Link
           className=" block text-sm leading-6 tablet:text-base desktop:text-lg desktop:leading-6 hover:text-mainBtnBgHover transition-colors duration-300"
           href="tel:+380731234567"
-          rel="noopener noreferrer nofollow"
           target="_blank"
-          aria-label="phone call"
         >
           +38 (073) 12 34 567
         </Link>
@@ -34,9 +30,7 @@ const FooterLinks: React.FC = () => (
       <Link
         className="block text-sm leading-6 tablet:text-base desktop:text-lg desktop:leading-6 hover:text-mainBtnBgHover transition-colors duration-300"
         href="mailto:support@carptravel.com"
-        rel="noopener noreferrer nofollow"
         target="_blank"
-        aria-label="send email"
       >
         support@carptravel.com
       </Link>
@@ -49,15 +43,14 @@ const FooterLinks: React.FC = () => (
       <p className="opacity-60 mr-5  text-xs font-extralight leading-5 desktop:leading-6 desktop:order-last desktop:w-86px desktop:ml-5 desktop:mr-0">
         Follow us
       </p>
-      <ul aria-label="List of social links">
+      <ul>
         {socialLinks.map(({ title, src }) => (
           <li key={title} className="w-86px desktop:text-right">
             <Link
-              className="footerSocialLink  "
+              className="contactsSocialLink  "
               href={src}
               rel="noopener noreferrer nofollow"
               target="_blank"
-              aria-label={`link to social network ${title}`}
             >
               {title}
             </Link>
@@ -68,4 +61,4 @@ const FooterLinks: React.FC = () => (
   </div>
 );
 
-export default FooterLinks;
+export default ContactsLinks;

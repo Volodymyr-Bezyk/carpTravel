@@ -8,7 +8,7 @@ import { footerValidationSchema } from '@/validationSchema';
 import { FooterFormDataTypes } from '@/types';
 import { FormInput, FormSubmitBtn } from '.';
 
-const FooterForm: React.FC = () => {
+const ContactsForm: React.FC = () => {
   const {
     handleSubmit,
     control,
@@ -76,8 +76,7 @@ const FooterForm: React.FC = () => {
             </span>
             <textarea
               {...field}
-              className="formInputText px-2 h-196px resize-none bg-inputBg w-full outline-none tablet:h-220px desktop:py-2px"
-              aria-label="Enter your message"
+              className="formInputText px-2 h-196px resize-none bg-inputBg w-full tablet:h-220px desktop:py-2px"
             />
           </label>
         )}
@@ -85,7 +84,6 @@ const FooterForm: React.FC = () => {
 
       <FormSubmitBtn
         text="send"
-        aria="send form"
         customStyles="ml-auto block w-20 tablet:w-auto"
         disabled={Object.keys(errors).length > 0 ? true : false}
       />
@@ -93,4 +91,4 @@ const FooterForm: React.FC = () => {
   );
 };
 
-export default FooterForm;
+export default ContactsForm;

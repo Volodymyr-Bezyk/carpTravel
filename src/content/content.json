@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": {
+      "strong": "Uncover ",
+      "simple": "Carpathian’s Secrets"
+    },
+    "placeList": "Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel",
+    "text": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!"
+  },
+  "about": {
+    "textTop": {
+      "strong": "a team of enthusiasts ",
+      "simple": "who are fully committed to the mission of creating unforgettable and extraordinary trips to the most beautiful parts of the Carpathians. Our goal is not just to show you the natural wonders of the mountains, but to provide you with a deep immersion in their magical atmosphere."
+    },
+    "textCenter": {
+      "strong": "We believe ",
+      "simple": "that nature has the power to inspire, strengthen character and provide new perspectives. Therefore, each of our tours is aimed at unlocking your potential, enriching your spiritual world and creating unforgettable memories."
+    },
+    "textBottom": {
+      "strong": " We use methods ",
+      "simple": "that are time-tested and proven. Our expert guides with in-depth knowledge of the Carpathian landscapes lead you safely through the mysteries of these mountains."
+    },
+    "addInfo": {
+      "p1": "From vacationers",
+      "p2": "to active travelers",
+      "p3": "we have a tour for everyone."
+    }
+  },
+  "career": {
+    "text": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission.",
+    "formText": "Don't miss your opportunity! Fill out the form right now and join our team!",
+    "formAgreement": "I confirm my consent to the processing of personal data."
+  }
+}

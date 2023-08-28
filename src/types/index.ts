@@ -14,8 +14,7 @@ export interface MobileMenuBtnProps {
   btnType?: string;
   customStyles?: string;
   handleClick?: React.MouseEventHandler<HTMLButtonElement>;
-
-  aria: string;
+  aria?: string;
 }
 
 export interface SectionTitleProps {
@@ -38,7 +37,7 @@ export interface FormSubmitBtnProps {
   text: string;
   customStyles?: string;
   handleClick?: React.FormEvent<HTMLFormElement>;
-  aria: string;
+  aria?: string;
   disabled: boolean;
 }
 

@@ -8,6 +8,7 @@ import { careerValidationSchema } from '@/validationSchema';
 import { CareerFormDataTypes } from '@/types';
 import { formatPhoneNumber } from '@/utils';
 import { FormInput, FormSubmitBtn } from '.';
+import content from '../content/content.json';
 
 const CareerForm: React.FC = () => {
   const {
@@ -47,8 +48,7 @@ const CareerForm: React.FC = () => {
       className="tablet:flex tablet:flex-col tablet:flex-wrap tablet:h-408px tablet:w-220px tablet:content-between desktop:h-466px desktop:w-72 desktop:-translate-y-86px"
     >
       <p className="secondaryText ml-auto mb-6 w-45 tablet:ml-0 tablet:mb-7 tablet:w-220px desktop:mb-14px desktop:w-60 ">
-        Don&rsquo;t miss your opportunity! Fill out the form right now and join
-        our team!
+        {content.career.formText}
       </p>
 
       <Controller
@@ -107,7 +107,7 @@ const CareerForm: React.FC = () => {
               Phone
             </span>
             <input
-              className={`formInputText pl-10 desktop:pl-14 pr-2 bg-inputBg w-full outline-none desktop:py-2px transition-all duration-300 ${
+              className={`formInputText pl-10 desktop:pl-14 pr-2 bg-inputBg w-full desktop:py-2px transition-all duration-300 ${
                 errors.tel && 'text-error'
               } ${errors.tel && 'opacity-95'}`}
               type={'tel'}
@@ -115,14 +115,12 @@ const CareerForm: React.FC = () => {
               {...field}
               value={formatPhoneNumber(field.value)}
               onChange={e => field.onChange(formatPhoneNumber(e.target.value))}
-              aria-label="Please enter your phone.This field is required"
             />
 
             <span
               className={` error absolute bottom-0 right-0 translate-y-full text-xs font-extralight leading-6 tracking-2.4 text-error flex items-center ${
                 errors.tel && 'opacity-95'
               }`}
-              aria-label="Incorrect phone"
             >
               Incorrect phone
             </span>
@@ -144,8 +142,7 @@ const CareerForm: React.FC = () => {
             </span>
             <textarea
               {...field}
-              className="formInputText px-2 h-196px resize-none bg-inputBg w-full outline-none tablet:h-230px desktop:py-2px desktop:h-268px"
-              aria-label="Enter your message"
+              className="formInputText px-2 h-196px resize-none bg-inputBg w-full tablet:h-230px desktop:py-2px desktop:h-268px"
             />
           </label>
         )}
@@ -156,7 +153,7 @@ const CareerForm: React.FC = () => {
         control={control}
         rules={{ required: true }}
         render={({ field }) => (
-          <label className=" mb-4 flex tablet:mb-0">
+          <label className=" mb-4 flex tablet:mb-0" tabIndex={0}>
             <input
               className=" hidden peer"
               type="checkbox"
@@ -164,8 +161,7 @@ const CareerForm: React.FC = () => {
               checked={field.value}
               value={''}
               onChange={e => field.onChange(e.target.checked)}
-              aria-labelledby="checkboxText"
-              aria-label="This field is required"
+              aria-label="Agreement"
             />
             <span className=" checkboxFrame relative shrink-0 w-22px h-22px border-1 border-white bg-inputBg peer-checked:bg-white transition-colors duration-300"></span>
             <p
@@ -174,7 +170,7 @@ const CareerForm: React.FC = () => {
               } ${errors.agreement && 'opacity-90'}`}
               id="checkboxText"
             >
-              I confirm my consent to the processing of personal data.
+              {content.career.formAgreement}
             </p>
           </label>
         )}
@@ -182,7 +178,6 @@ const CareerForm: React.FC = () => {
 
       <FormSubmitBtn
         text="send"
-        aria="send form"
         customStyles="ml-auto block w-20 tablet:order-2 tablet:w-auto"
         disabled={Object.keys(errors).length > 0 ? true : false}
       />

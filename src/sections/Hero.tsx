@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 
 import React from 'react';
 import { Section, Container } from '@/components';
+import content from '../content/content.json';
 
 const Hero: React.FC = () => (
   <Section
@@ -23,20 +24,18 @@ const Hero: React.FC = () => (
 
         <div className=" tablet:order-first tablet:w-426px tablet:h-full tablet:flex tablet:flex-col tablet:justify-between desktop:w-646px">
           <h1 className=" mb-6 w-72 heroTitle tablet:mb-0 tablet:w-426px  desktop:w-646px  ">
-            <strong className=" font-medium">Uncover </strong>
-            Carpathian&rsquo;s Secrets
+            <strong className=" font-medium">
+              {content.hero.title.strong}
+            </strong>
+            {content.hero.title.simple}
           </h1>
           <p className=" heroPlaceList mb-6 w-40  tablet:mb-0 tablet:w-72 desktop:w-646px  ">
-            Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel
+            {content.hero.placeList}
           </p>
         </div>
 
         <div className=" tablet:w-230px desktop:w-294px">
-          <p className="simpleText mb-6 tablet:mb-7 ">
-            We offer you unforgettable trips to the most beautiful parts of the
-            Carpathians. Enjoy stunning views, exciting expeditions, and the
-            best service!
-          </p>
+          <p className="simpleText mb-6 tablet:mb-7 ">{content.hero.text}</p>
           <Link
             className=" cursor-pointer relative w-full h-53px max-w-xs ml-auto mr-auto block px-16 py-4.5 text-center text-lg font-bold leading-none bg-mainBtnBg customHeroButtonBorder hover:bg-mainBtnBgHover focus:bg-mainBtnBgHover transition-colors duration-300 tablet:py-14px tablet:leading-normal desktop:py-4 desktop:text-32 desktop:h-71px"
             spy={true}
@@ -44,7 +43,7 @@ const Hero: React.FC = () => (
             offset={50}
             duration={500}
             to="contacts"
-            aria-label="Join now. Scroll to contacts section"
+            href="/"
           >
             JOIN NOW
           </Link>

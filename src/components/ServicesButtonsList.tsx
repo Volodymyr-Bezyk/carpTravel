@@ -16,7 +16,6 @@ const ServicesButtonsList = ({
             className={`servicesButtonText ${idx === index && 'activeService'}`}
             type="button"
             onClick={() => swipeToSlide(idx, swiperRef)}
-            aria-label={`Change slide to ${option}`}
           >
             {option}
           </button>

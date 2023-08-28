@@ -17,29 +17,25 @@ const MobileMenu = ({ mobMenuOpen, handleClick }: MobileMenuProps) => {
       <Container>
         <MobileMenuBtn
           text="close"
-          aria="close mobile menu"
           customStyles="block mb-28 ml-auto"
           handleClick={() => handleClick(false)}
         />
-        <menu
-          className="grid gap-12 place-items-center"
-          aria-label="mobile menu"
-        >
-          {menuLinks.map(({ title, href, rel }) => (
-            <Link
-              key={title}
-              to={href}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              rel={rel}
-              className="mobileMenuLink"
-              aria-label={`link to ${title} section`}
-              onClick={() => handleClick(false)}
-            >
-              {title}
-            </Link>
+        <menu className="grid gap-12 place-items-center">
+          {menuLinks.map(({ title, href }) => (
+            <li key={title}>
+              <Link
+                to={href}
+                href="/"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="mobileMenuLink"
+                onClick={() => handleClick(false)}
+              >
+                {title}
+              </Link>
+            </li>
           ))}
         </menu>
       </Container>

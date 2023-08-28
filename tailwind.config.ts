@@ -166,6 +166,13 @@ const config: Config = {
       1: '1px',
       3: '3px',
     },
+    aspectRatio: {
+      mob: '280/213',
+      tab: '463/370',
+      // tab: '0.5',
+      // desk: '607/429',
+      desk: '4 / 3',
+    },
   },
   plugins: [],
 };

@@ -59,8 +59,9 @@ const GallerySlider: React.FC = () => {
               src={src}
               alt={`gallery image with nature number ${idx + 1}`}
               fill
-              sizes="(max-width: 768px) 50vw, (min-width: 1200px) 70vw, 100vw"
-              loading="lazy"
+              sizes="(max-width: 768px) 50vw, (min-width: 1440px) 70vw, 100vw"
+              priority={true}
+              placeholder="blur"
             />
           </div>
         </SwiperSlide>

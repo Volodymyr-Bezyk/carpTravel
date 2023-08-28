@@ -121,7 +121,7 @@
   background-size: cover;
 }
 
-.footer {
+.contacts {
   background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
     url('/footerBgMob.jpg');
   background-repeat: no-repeat;
@@ -265,7 +265,7 @@
     z-index: 2;
   }
 
-  .footer {
+  .contacts {
     background-image: linear-gradient(
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
@@ -347,7 +347,7 @@
       ),
       url('/galleryBgDesk.jpg');
   }
-  .footer {
+  .contacts {
     background-image: linear-gradient(
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
@@ -393,7 +393,7 @@
   .careerAdvantageName {
     @apply text-sm tablet:text-base tablet:leading-5 desktop:text-lg desktop:leading-6;
   }
-  .footerSocialLink {
+  .contactsSocialLink {
     @apply inline-block text-sm leading-6 border-1 border-transparent hover:border-b-white transition-colors duration-300 tablet:text-base desktop:text-lg desktop:leading-6;
   }
   .mobileMenuLink {
