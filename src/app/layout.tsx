@@ -1,5 +1,4 @@
 import '/public/main.css';
-import Head from 'next/head';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -8,6 +7,10 @@ export const metadata: Metadata = {
   description: 'Uncover secrets of the Carpathian mountains',
   viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow',
+  openGraph: {
+    title: 'CarpTravel',
+    description: 'Uncover secrets of the Carpathian mountains',
+  },
 };
 
 const inter = Inter({
@@ -19,19 +22,6 @@ const inter = Inter({
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <Head>
-      <title>Cool Title</title>
-
-      <meta
-        property="og:title"
-        content="Uncover secrets of the Carpathian mountains"
-      />
-      <meta
-        property="og:description"
-        content="Uncover secrets of the Carpathian mountains"
-      />
-      <meta property="og:image" content="./favicon.ico" />
-    </Head>
     <body className={` ${inter.className} text-white`}>{children}</body>
   </html>
 );
