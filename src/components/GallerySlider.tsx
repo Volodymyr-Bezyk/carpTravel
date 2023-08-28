@@ -60,8 +60,9 @@ const GallerySlider: React.FC = () => {
               alt={`gallery image with nature number ${idx + 1}`}
               fill
               sizes="(max-width: 768px) 50vw, (min-width: 1440px) 70vw, 100vw"
-              priority={true}
+              priority={idx <= 2 ? true : false}
               placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOU9j5yBAADowHw7R0T9QAAAABJRU5ErkJggg=="
             />
           </div>
         </SwiperSlide>

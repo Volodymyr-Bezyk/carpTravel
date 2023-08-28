@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google';
 export const metadata: Metadata = {
   title: 'CarpTravel',
   description: 'Uncover secrets of the Carpathian mountains',
+  viewport: 'width=device-width, initial-scale=1.0',
+  robots: 'index, follow',
 };
 
 const inter = Inter({
@@ -21,5 +23,3 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default RootLayout;
-
-//  font-inter

@@ -80,4 +80,5 @@ export interface ServicesImgProps {
   srcTab: string;
   srcDesk: string;
   call: string;
+  index: number;
 }

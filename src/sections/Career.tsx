@@ -30,10 +30,7 @@ const Career: React.FC = () => (
               key={title}
               className=" mb-4 tablet:mb-6 desktop:flex desktop:justify-between"
             >
-              <h4
-                className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 "
-                id={title}
-              >
+              <h4 className="careerAdvantageName mb-2 desktop:w-294px desktop:mb-0 ">
                 {title}
               </h4>
               <p className=" opacity-60 text-xs font-extralight leading-5 desktop:w-72 desktop:text-left desktop:leading-6">

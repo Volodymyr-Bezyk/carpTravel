@@ -164,14 +164,13 @@ const CareerForm: React.FC = () => {
               aria-label="Agreement"
             />
             <span className=" checkboxFrame relative shrink-0 w-22px h-22px border-1 border-white bg-inputBg peer-checked:bg-white transition-colors duration-300"></span>
-            <p
+            <span
               className={`opacity-60 ml-2 text-xs font-extralight leading-1.83 desktop:leading-6 transition-all duration-300 ${
                 errors.agreement && 'text-error'
               } ${errors.agreement && 'opacity-90'}`}
-              id="checkboxText"
             >
               {content.career.formAgreement}
-            </p>
+            </span>
           </label>
         )}
       />

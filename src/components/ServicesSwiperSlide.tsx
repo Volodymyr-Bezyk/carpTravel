@@ -33,6 +33,7 @@ const ServicesSwiperSlide = ({
           srcTab={srcTab}
           srcDesk={srcDesk}
           call={call}
+          index={index}
         />
         <div className=" sm:h-[394px] md:h-[354px] tablet:h-auto tablet:w-220px tablet:flex tablet:flex-col desktop:w-606px desktop:h-484px desktop:flex-wrap desktop:relative">
           <p
