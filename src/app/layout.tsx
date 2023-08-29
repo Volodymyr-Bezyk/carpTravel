@@ -13,12 +13,19 @@ export const metadata: Metadata = {
     title: 'CarpTravel',
     description: 'Uncover secrets of the Carpathian mountains',
     siteName: 'CarpTravel',
-    images: [
-      { url: './ogpLogo.ico' },
-      { url: '/public/ogpLogo.png' },
-      { url: '/public/ogpLogo.jpg' },
-    ],
+    images: [{ url: '/ogpLogo.jpg' }, { url: '/ogpLogo.png' }],
   },
+
+  applicationName: 'CarpTravel',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Travel', 'Tourism', 'Adrenaline'],
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
+  category: 'tourism',
 };
 
 const inter = Inter({
