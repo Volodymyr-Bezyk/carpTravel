@@ -1,4 +1,5 @@
 'use client';
+import toast from 'react-hot-toast';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -40,6 +41,7 @@ const CareerForm: React.FC = () => {
       message: '',
       agreement: false,
     });
+    toast.success(`Form sended! Thanks. We contact you soon!`);
   };
 
   return (

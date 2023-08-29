@@ -27,7 +27,7 @@ const ServicesSwiperSlide = ({
         </p>
       </div>
 
-      <div className=" tablet:flex tablet:h-[393px]  tablet:justify-between desktop:h-auto">
+      <div className=" relative z-10 tablet:flex tablet:h-[393px]  tablet:justify-between desktop:h-auto">
         <ServicesImg
           srcMob={srcMob}
           srcTab={srcTab}

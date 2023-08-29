@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CarpTravel app
 
-## Getting Started
+Застосунок призначений для фанатів екстримального відпочинку у гірській
+місцевості українських Карпат. Пристуній вибір різних видів розваг та відповідні
+фото. Є можливість заповнити контактні форми для зворотнього зв`язку.
 
-First, run the development server:
+Цей проект було створено за допомогою Next.js, Tailwind, TypeScript. Також
+пристуній адаптив для мобільних пристроїв.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 0. Common
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Загалом застосунок містить 7 загальних секцій.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 1. Header section
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Ця секція складається із логотипу компанії та головного меню навігації. Для
+переміщення по застосунку необхідно використовувати посилання на відповідні
+секції у хедері або у мобільному меню. Плавне прокручування сторінки до
+відповідної секції відбувається завдяки використанню бібліотеки react-scroll.
 
-## Learn More
+![Header. Step 1](./assets/step1.png)
 
-To learn more about Next.js, take a look at the following resources:
+## 2. Hero section
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Секція герой містить основний заголовок застосунку із закликом дослідити та
+відкрити секрети українських карпатських гір. Також тут доступний перелік
+локацій де можна отримати послуги. За допомогою посилання "Join Now"
+відбувається плавне переміщення до секції контактів.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Hero. Step 2](./assets/step2.png)
 
-## Deploy on Vercel
+## 3. About section
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Тут розміщена основна інформація про компанію, яка складається із заголовку та
+опису.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![About. Step 3](./assets/step3.png)
+
+## 4. Services section
+
+Інформація про доступні послуги компанії, їх опис та фото із відповідним
+закликом. Складається із 5 слайдів із змінним фото виду відпочинку та фону.
+Слайдер реалізовано за допомогою бібліотеки Swiper.
+
+![Services. Step 4](./assets/step4.png)
+
+## 5. Career section
+
+Секція складається із двох частин: списку переваг та контактної форми. Контактна
+форма створена за допомого react-hook-form та забезпечена жива валідація.
+Відправка форми недоступна коли присутні помилки валідації полів форми. Успішне
+відправлення форми показується нотифікацією у верхньому куті екрану реалізованою
+завдяки react-hot-toast
+
+![Career. Step 5](./assets/step5.png)
+
+## 6. Gallery section
+
+Галерея із фото можливих місць відпочинку замовників відпочинку. Безкінечний
+слайдер реалізований через Swiper. Зміна слайдів через перетягування зображення
+або використання відповідних кнопок prev/next. Активний слайд має більший
+розмір, а суміжні затемнені.
+
+![Gallery. Step 6](./assets/step6.png)
+
+## 7. Contacts section
+
+Секція контаків складається із блоку контактних посилань, блоку посилань на
+соціальні мережі та контактної форми. Реалізація форми аналогічна із формою
+секції 5.
+
+Також присутня кнопка "UP" для переміщення до початку додатку. Реалізована через
+бібліотеку react-scroll-to-top.
+
+![Contacts. Step 6](./assets/step7.png)

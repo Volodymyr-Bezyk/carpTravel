@@ -1030,6 +1030,10 @@ video {
   right: 0;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -1502,8 +1506,6 @@ video {
   transition-duration: 300ms;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
-
 .hero {
   background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
     url('/heroBgMob.jpg');
@@ -1539,46 +1541,6 @@ video {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.servicesBg1 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/servicesBgMob1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.servicesBg2 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/servicesBgMob2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.servicesBg3 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/servicesBgMob3.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.servicesBg4 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/servicesBgMob4.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.servicesBg5 {
-  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/servicesBgMob5.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .activeService {
@@ -1626,7 +1588,7 @@ video {
 
 .contacts {
   background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)),
-    url('/footerBgMob.jpg');
+    url('/contactsBgMob.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1637,6 +1599,60 @@ video {
   right: 20px;
   background-color: rgba(2, 15, 8, 0.75);
   box-shadow: none !important;
+}
+
+.serviceBgLayer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75));
+  z-index: 2;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        180deg,
+        #001826 0%,
+        rgba(0, 37, 49, 0) 100%
+      ),
+      url('/heroBgMob2x.jpg');
+  }
+
+  .about {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/aboutBgMob2x.jpg');
+  }
+
+  .career {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/careerBgMob2x.jpg');
+  }
+
+  .gallery {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/galleryBgMob2x.jpg');
+  }
+
+  .contacts {
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url('/contactsBgMob2x.jpg');
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1656,11 +1672,7 @@ video {
   }
 
   .about {
-    background-image: linear-gradient(
-        180deg,
-        #001826 0%,
-        rgba(0, 37, 49, 0) 100%
-      ),
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
       url('/aboutBgMob480.jpg');
   }
 
@@ -1676,6 +1688,28 @@ video {
   .scroll-to-top.scrollUp {
     right: calc((100% - 480px) / 2 + 20px);
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          180deg,
+          #001826 0%,
+          rgba(0, 37, 49, 0) 100%
+        ),
+        url('/heroBgMob4802x.jpg');
+    }
+
+    .about {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.5),
+          rgba(2, 15, 8, 0.5)
+        ),
+        url('/aboutBgMob4802x.jpg');
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1690,46 +1724,6 @@ video {
 
   .about {
     background-image: url('/aboutBgTab.jpg');
-  }
-
-  .servicesBg1 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgTab1.jpg');
-  }
-
-  .servicesBg2 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgTab2.jpg');
-  }
-
-  .servicesBg3 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgTab3.jpg');
-  }
-
-  .servicesBg4 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgTab4.jpg');
-  }
-
-  .servicesBg5 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgTab5.jpg');
   }
 
   .career {
@@ -1779,11 +1773,57 @@ video {
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
       ),
-      url('/footerBgTab.jpg');
+      url('/contactsBgTab.jpg');
   }
 
   .scroll-to-top.scrollUp {
     right: calc((100% - 768px) / 2 + 20px);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          180deg,
+          #001826 0%,
+          rgba(0, 37, 49, 0) 100%
+        ),
+        url('/heroBgTab2x.jpg');
+    }
+
+    .about {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/aboutBgTab2x.jpg');
+    }
+
+    .career {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/careerBgTab2x.jpg');
+    }
+
+    .gallery {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/galleryBgTab2x.jpg');
+    }
+
+    .contacts {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/contactsBgTab2x.jpg');
+    }
   }
 }
 
@@ -1804,46 +1844,6 @@ video {
   .about {
     background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
       url('/aboutBgDesk.jpg');
-  }
-
-  .servicesBg1 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgDesk1.jpg');
-  }
-
-  .servicesBg2 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgDesk2.jpg');
-  }
-
-  .servicesBg3 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgDesk3.jpg');
-  }
-
-  .servicesBg4 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgDesk4.jpg');
-  }
-
-  .servicesBg5 {
-    background-image: linear-gradient(
-        rgba(2, 15, 8, 0.75),
-        rgba(2, 15, 8, 0.75)
-      ),
-      url('/servicesBgDesk5.jpg');
   }
 
   .career {
@@ -1867,11 +1867,57 @@ video {
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
       ),
-      url('/footerBgDesk.jpg');
+      url('/contactsBgDesk.jpg');
   }
 
   .scroll-to-top.scrollUp {
     right: calc((100% - 1440px) / 2 + 20px);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          180deg,
+          #001826 0%,
+          rgba(0, 37, 49, 0) 100%
+        ),
+        url('/heroBgDesk2x.jpg');
+    }
+
+    .about {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.5),
+          rgba(2, 15, 8, 0.5)
+        ),
+        url('/aboutBgDesk2x.jpg');
+    }
+
+    .career {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/careerBgDesk2x.jpg');
+    }
+
+    .gallery {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/galleryBgDesk2x.jpg');
+    }
+
+    .contacts {
+      background-image: linear-gradient(
+          rgba(2, 15, 8, 0.75),
+          rgba(2, 15, 8, 0.75)
+        ),
+        url('/contactsBgDesk2x.jpg');
+    }
   }
 }
 

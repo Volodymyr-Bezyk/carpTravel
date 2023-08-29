@@ -1,5 +1,6 @@
 'use client';
 import ScrollToTop from 'react-scroll-to-top';
+import { Toaster } from 'react-hot-toast';
 import dynamic from 'next/dynamic';
 
 const Header = dynamic(() => import('../sections/Header'));
@@ -26,6 +27,17 @@ const Home = () => (
       smooth
       component={<span aria-label="Scroll to top of the page">UP</span>}
       className="scrollUp"
+    />
+    <Toaster
+      position="top-right"
+      reverseOrder={false}
+      toastOptions={{
+        duration: 3000,
+        style: {
+          background: 'rgba(2, 15, 8, 0.75)',
+          color: '#fff',
+        },
+      }}
     />
   </main>
 );

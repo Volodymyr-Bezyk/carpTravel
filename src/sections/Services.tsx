@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, A11y } from 'swiper/modules';
 import 'swiper/css';
@@ -29,8 +30,19 @@ const Services: React.FC = () => {
         {servicesInfo.map((service, index) => (
           <SwiperSlide
             key={index}
-            className={`servicesBg${service.order} servicesSlide py-14 tablet:py-16 desktop:py-104px w-full h-full`}
+            className={` relative servicesSlide serviceBgLayer py-14 tablet:py-16 desktop:py-104px w-full h-full`}
           >
+            <Image
+              src={`/servicesBgDesk${service.order}2x.jpg`}
+              alt={`sevices nature img ${service.order}`}
+              fill
+              sizes="100vw"
+              priority={index === 0 ? true : false}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOU9j5yBAADowHw7R0T9QAAAABJRU5ErkJggg=="
+              className=" object-cover "
+            />
+
             <ServicesSwiperSlide
               service={service}
               index={index}

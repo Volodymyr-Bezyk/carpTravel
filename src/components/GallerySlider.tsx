@@ -53,7 +53,7 @@ const GallerySlider: React.FC = () => {
       className=" swiperStyles"
     >
       {galleryImages.map((src, idx) => (
-        <SwiperSlide key={idx} className=" gallerySlide">
+        <SwiperSlide key={idx} className=" gallerySlide z-10">
           <div className=" relative w-[415px] h-[294px] desktop:w-[606px] desktop:h-[430px]">
             <Image
               src={src}

@@ -1,4 +1,5 @@
 'use client';
+import toast from 'react-hot-toast';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -27,6 +28,7 @@ const ContactsForm: React.FC = () => {
   const onSubmit: SubmitHandler<FooterFormDataTypes> = data => {
     console.log('submitFooterForm', data);
     reset({ name: '', email: '', message: '' });
+    toast.success(`Form sended! Thanks. We contact you soon!`);
   };
 
   return (
