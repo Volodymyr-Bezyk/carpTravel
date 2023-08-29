@@ -12,34 +12,34 @@ const Gallery = dynamic(() => import('../sections/Gallery'));
 const Contacts = dynamic(() => import('../sections/Contacts'));
 
 const Home = () => (
-  <main className="bg-galleryBg relative">
-    <div className="hero responsive relative">
-      <Header />
+  <>
+    <Header />
+    <main className="bg-galleryBg relative">
+      {/* <div className="hero responsive relative">  </div> */}
       <Hero />
-    </div>
-
-    <About />
-    <Services />
-    <Career />
-    <Gallery />
-    <Contacts />
-    <ScrollToTop
-      smooth
-      component={<span aria-label="Scroll to top of the page">UP</span>}
-      className="scrollUp"
-    />
-    <Toaster
-      position="top-right"
-      reverseOrder={false}
-      toastOptions={{
-        duration: 3000,
-        style: {
-          background: 'rgba(2, 15, 8, 0.75)',
-          color: '#fff',
-        },
-      }}
-    />
-  </main>
+      <About />
+      <Services />
+      <Career />
+      <Gallery />
+      <Contacts />
+      <ScrollToTop
+        smooth
+        component={<span aria-label="Scroll to top of the page">UP</span>}
+        className="scrollUp"
+      />
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: 'rgba(2, 15, 8, 0.75)',
+            color: '#fff',
+          },
+        }}
+      />
+    </main>
+  </>
 );
 
 export default Home;

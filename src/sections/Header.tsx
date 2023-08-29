@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const [mobMenuOpen, setMobMenuOpen] = useState(false);
 
   return (
-    <header className=" pt-9 tablet:pt-6">
+    <header className=" responsive absolute w-full top-0 left-1/2 -translate-x-1/2 z-[1] pt-9 tablet:pt-6">
       <Container>
         <div className="flex justify-between items-center">
           <Link

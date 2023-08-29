@@ -8,7 +8,7 @@ import content from '../content/content.json';
 const Hero: React.FC = () => (
   <Section
     id="hero"
-    customStyles="pt-9 pb-14 tablet:pt-66px tablet:pb-16 desktop:pt-72px desktop:pb-104px"
+    customStyles="hero responsive relative pt-[105px] pb-14 tablet:pt-[123px] tablet:pb-16 desktop:pt-[129px] desktop:pb-104px"
   >
     <Container>
       <div className=" tablet:flex tablet:flex-col tablet:flex-wrap tablet:content-between tablet:h-345px desktop:h-529px ">
