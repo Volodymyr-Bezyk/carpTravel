@@ -36,7 +36,7 @@ const Services: React.FC = () => {
               src={`/servicesBgDesk${service.order}2x.jpg`}
               alt={`sevices nature img ${service.order}`}
               fill
-              sizes="100vw"
+              sizes=" (min-width: 320px) 100vw, 100vw"
               priority={index === 0 ? true : false}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOU9j5yBAADowHw7R0T9QAAAABJRU5ErkJggg=="

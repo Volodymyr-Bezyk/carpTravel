@@ -3,29 +3,46 @@ import toast from 'react-hot-toast';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
+import { useLocalStorage } from '@/hooks';
 import { footerValidationSchema } from '@/validationSchema';
-import { FooterFormDataTypes } from '@/types';
+import { ContactsFormDataTypes } from '@/types';
+import { LS_KEYS } from '@/constants';
 import { FormInput, FormSubmitBtn } from '.';
 
 const ContactsForm: React.FC = () => {
+  const [data, setData] = useLocalStorage(LS_KEYS.contacts);
+
   const {
     handleSubmit,
     control,
     reset,
+    watch,
     formState: { errors },
-  } = useForm<FooterFormDataTypes>({
+  } = useForm<ContactsFormDataTypes>({
     mode: 'onChange',
     resolver: yupResolver(footerValidationSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      message: '',
+      name: data?.name || '',
+      email: data?.email || '',
+      message: data?.message || '',
     },
   });
 
-  const onSubmit: SubmitHandler<FooterFormDataTypes> = data => {
+  const formData: ContactsFormDataTypes = watch();
+
+  useEffect(() => {
+    for (const key in formData) {
+      if (Object.prototype.hasOwnProperty.call(formData, key)) {
+        if (formData[key] !== data[key]) {
+          setData(formData);
+        }
+      }
+    }
+  }, [data, formData, setData]);
+
+  const onSubmit: SubmitHandler<ContactsFormDataTypes> = data => {
     console.log('submitFooterForm', data);
     reset({ name: '', email: '', message: '' });
     toast.success(`Form sended! Thanks. We contact you soon!`);

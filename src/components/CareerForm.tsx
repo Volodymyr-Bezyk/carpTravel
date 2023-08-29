@@ -3,15 +3,18 @@ import toast from 'react-hot-toast';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
+import { useLocalStorage } from '@/hooks';
 import { careerValidationSchema } from '@/validationSchema';
 import { CareerFormDataTypes } from '@/types';
+import { LS_KEYS } from '@/constants';
 import { formatPhoneNumber } from '@/utils';
 import { FormInput, FormSubmitBtn } from '.';
 import content from '../content/content.json';
 
 const CareerForm: React.FC = () => {
+  const [data, setData] = useLocalStorage(LS_KEYS.career);
   const {
     handleSubmit,
     control,
@@ -22,14 +25,25 @@ const CareerForm: React.FC = () => {
     mode: 'onChange',
     resolver: yupResolver(careerValidationSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      position: '',
-      tel: '',
-      message: '',
-      agreement: false,
+      name: data?.name || '',
+      email: data?.email || '',
+      position: data?.position || '',
+      tel: data?.tel || '',
+      message: data?.message || '',
+      agreement: data?.agreement || false,
     },
   });
+
+  const formData: CareerFormDataTypes = watch();
+  useEffect(() => {
+    for (const key in formData) {
+      if (Object.prototype.hasOwnProperty.call(formData, key)) {
+        if (formData[key] !== data[key]) {
+          setData(formData);
+        }
+      }
+    }
+  }, [data, formData, setData]);
 
   const onSubmit: SubmitHandler<CareerFormDataTypes> = data => {
     console.log('submitCareerForm', data);

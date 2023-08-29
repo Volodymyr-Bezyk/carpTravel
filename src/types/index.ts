@@ -41,13 +41,14 @@ export interface FormSubmitBtnProps {
   disabled: boolean;
 }
 
-export interface FooterFormDataTypes {
+export interface ContactsFormDataTypes {
   name: string;
   email: string;
   message: string | undefined;
+  [key: string]: string | boolean | undefined;
 }
 
-export interface CareerFormDataTypes extends FooterFormDataTypes {
+export interface CareerFormDataTypes extends ContactsFormDataTypes {
   position: string | undefined;
   tel: string;
   agreement: boolean;

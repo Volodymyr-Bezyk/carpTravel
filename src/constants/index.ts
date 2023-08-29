@@ -110,3 +110,8 @@ export const galleryImagesLocal = [
   '/galleryImg2.jpg',
   '/galleryImg3.jpg',
 ];
+
+export const LS_KEYS = {
+  career: 'careerFormKey',
+  contacts: 'contactsFormKey',
+};
