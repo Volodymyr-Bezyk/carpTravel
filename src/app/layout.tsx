@@ -8,10 +8,16 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow',
   openGraph: {
+    type: 'website',
+    url: 'https://carptravel-five.vercel.app/',
     title: 'CarpTravel',
     description: 'Uncover secrets of the Carpathian mountains',
-    images: './ogpLogo.ico',
-    url: 'https://carptravel-five.vercel.app/',
+    siteName: 'CarpTravel',
+    images: [
+      { url: './ogpLogo.ico' },
+      { url: '/public/ogpLogo.png' },
+      { url: '/public/ogpLogo.jpg' },
+    ],
   },
 };
 
