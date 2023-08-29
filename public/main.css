@@ -987,13 +987,14 @@ video {
 }
 
 .centeredMobileMenu {
-  /* @apply fixed w-full h-full top-0 left-1/2 -translate-x-1/2 z-10; */
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   z-index: 10;
   height: 100%;
   width: 100%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .error {

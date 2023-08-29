@@ -474,8 +474,7 @@
     @apply uppercase text-3xl font-normal leading-normal hover:text-mainBtnBgHover transition-colors duration-300 desktop:text-32;
   }
   .centeredMobileMenu {
-    /* @apply fixed w-full h-full top-0 left-1/2 -translate-x-1/2 z-10; */
-    @apply fixed w-full h-full top-0 left-0 z-100;
+    @apply fixed w-full h-full top-0 left-1/2 -translate-x-1/2 z-10;
   }
   .error {
     opacity: 0;

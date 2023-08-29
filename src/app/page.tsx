@@ -12,7 +12,7 @@ const Gallery = dynamic(() => import('../sections/Gallery'));
 const Contacts = dynamic(() => import('../sections/Contacts'));
 
 const Home = () => (
-  <>
+  <div className=" relative">
     <Header />
     <main className="bg-galleryBg relative">
       {/* <div className="hero responsive relative">  </div> */}
@@ -39,7 +39,7 @@ const Home = () => (
         }}
       />
     </main>
-  </>
+  </div>
 );
 
 export default Home;
