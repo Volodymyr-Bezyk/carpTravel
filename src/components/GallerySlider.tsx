@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 
-import { galleryImages } from '@/constants';
+import { galleryImagesLocal } from '@/constants';
 import { GallerySliderButtons } from '.';
 
 const GallerySlider: React.FC = () => {
@@ -52,7 +52,7 @@ const GallerySlider: React.FC = () => {
       modules={[EffectCoverflow, Navigation, A11y]}
       className=" swiperStyles"
     >
-      {galleryImages.map((src, idx) => (
+      {galleryImagesLocal.map((src, idx) => (
         <SwiperSlide key={idx} className=" gallerySlide z-10">
           <div className=" relative w-[415px] h-[294px] desktop:w-[606px] desktop:h-[430px]">
             <Image

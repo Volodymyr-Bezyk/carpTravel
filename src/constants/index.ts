@@ -109,6 +109,12 @@ export const galleryImagesLocal = [
   '/galleryImg1.jpg',
   '/galleryImg2.jpg',
   '/galleryImg3.jpg',
+  '/galleryImg1.jpg',
+  '/galleryImg2.jpg',
+  '/galleryImg3.jpg',
+  '/galleryImg1.jpg',
+  '/galleryImg2.jpg',
+  '/galleryImg3.jpg',
 ];
 
 export const LS_KEYS = {
