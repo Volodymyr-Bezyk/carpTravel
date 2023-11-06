@@ -7,6 +7,9 @@
 Цей проект було створено за допомогою Next.js, Tailwind, TypeScript. Також
 пристуній адаптив для мобільних пристроїв.
 
+Design:
+https://www.figma.com/file/2nHaXyrwQxqXLYmPUGQuP1/CarpTravel---%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B4%D0%B0%D0%BD%D0%BD%D1%8F?type=design&node-id=348-14&mode=design&t=tYgphzvUaoUTEJw5-0
+
 ## 0. Common
 
 Загалом застосунок містить 7 загальних секцій.
